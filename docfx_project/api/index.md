@@ -1,4 +1,4 @@
-# API reference
+# PIA Sharp API Reference
 
 This section contains detailed information about the public classes, methods and enums found in `Cmpnnt.Pia`.
 

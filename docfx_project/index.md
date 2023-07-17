@@ -1,10 +1,10 @@
-# Developer Documentation
+# PIA Sharp
 
 For basic installation instructions, see the [main readme](https://github.com/cmpnnt/pia-sharp#readme).
 
 ## Compatibility
 
-`Cmpnnt.Pia.Ctl` has been tested against version `3.3.1` on Windows and Linux (MacOS is unsupported until .NET 8). 
+PIA Sharp's main package, `Cmpnnt.Pia.Ctl`, has been tested against version `3.3.1` on Windows and Linux (MacOS is unsupported until .NET 8). 
 It provides access to every `piactl` command available in those version on those systems. It might also work on other 
 versions of `piactl`, provided they expose the same commands with the same parameters. However, this hasn't 
 been tested and nothing is guaranteed.
