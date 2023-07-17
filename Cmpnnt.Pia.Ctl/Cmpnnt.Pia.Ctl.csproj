@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <PublishAot>true</PublishAot>
+        <StripSymbols>true</StripSymbols>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Cmpnnt.Pia.Ctl</RootNamespace>
+        <PackageId>Cmpnnt.Pia.Ctl</PackageId>
+    </PropertyGroup>
+
+</Project>
