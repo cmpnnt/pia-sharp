@@ -4,6 +4,16 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>Cmpnnt.Pia.DependencyInjection</PackageId>
+        <Version>0.1.0</Version>
+        <Title>PIA Sharp - Dependency Injection</Title>
+        <description>Dependency injection support for PIA Sharp, a .NET/C# wrapper around the Private Internet Access VPN CLI</description>
+        <Copyright>2023 Cmpnnt</Copyright>
+        <PackageProjectUrl>https://github.com/cmpnnt/pia-sharp</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/cmpnnt/pia-sharp/blob/main/LICENSE.txt</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/cmpnnt/pia-sharp</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>PIA, private internet access, VPN</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>

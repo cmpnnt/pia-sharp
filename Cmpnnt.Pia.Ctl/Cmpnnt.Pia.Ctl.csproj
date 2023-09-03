@@ -7,7 +7,18 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Cmpnnt.Pia.Ctl</RootNamespace>
-        <PackageId>Cmpnnt.Pia.Ctl</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('Linux'))">Cmpnnt.Pia.Ctl.Linux</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX'))">Cmpnnt.Pia.Ctl.Mac</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('Windows'))">Cmpnnt.Pia.Ctl.Windows</PackageId>
+        <Version>0.1.0</Version>
+        <Title>PIA Sharp</Title>
+        <Description>A .NET/C# wrapper around the Private Internet Access VPN CLI</Description>
+        <Copyright>2023 Cmpnnt</Copyright>
+        <PackageProjectUrl>https://github.com/cmpnnt/pia-sharp</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/cmpnnt/pia-sharp/blob/main/LICENSE.txt</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/cmpnnt/pia-sharp</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>PIA, private internet access, VPN</PackageTags>
     </PropertyGroup>
 
 </Project>
