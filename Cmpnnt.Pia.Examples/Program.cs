@@ -18,11 +18,14 @@ public class Program
             {
                 services.AddPiaCtl(options =>
                 {
-                    // Omit the options to use the default path to piactl on your system.
+                    // Omit this to use the default path to piactl on your system.
                     options.PiaPath = @"C:\path\to\piactl.exe";
                 });
+                
                 // Use services.AddPiaCtl like above (with or without an options parameter) or add it as a singleton like below:
                 //services.AddSingleton<PiaCtl>();
+                
+                // Just a sample DI-registered class which consumes cmpnnt.pia.ctl
                 services.AddScoped<SomeClass>();
             })
             .ConfigureLogging(options =>
@@ -31,18 +34,21 @@ public class Program
                 options.AddConsole();
             })
             .Build();
-
+        
         await GetServiceAndRunIt(host.Services);
 
         await host.RunAsync();
-
-        static async Task GetServiceAndRunIt(IServiceProvider hostProvider)
-        {
-            using IServiceScope serviceScope = hostProvider.CreateScope();
-            IServiceProvider provider = serviceScope.ServiceProvider;
-            var sc = provider.GetRequiredService<SomeClass>();
-            await sc.Run();
-        }
+    }
+    
+    /// <summary>
+    /// A simple function to get the sample <see cref="SomeClass"/> from DI and invoke it.:
+    /// </summary>
+    /// <param name="hostProvider"></param>
+    private static async Task GetServiceAndRunIt(IServiceProvider hostProvider)
+    {
+        using IServiceScope serviceScope = hostProvider.CreateScope();
+        IServiceProvider provider = serviceScope.ServiceProvider;
+        var sc = provider.GetRequiredService<SomeClass>();
+        await sc.Run();
     }
 }
-
