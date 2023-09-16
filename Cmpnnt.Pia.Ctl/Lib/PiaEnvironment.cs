@@ -23,8 +23,7 @@ public static class PiaEnvironment
             }
             if(description.ToLower().Contains("linux"))
             {
-                //TODO: Replace this path with an actual linux path
-                return @"C:\Program Files\Private Internet Access\piactl.exe";
+                return @"/usr/local/bin/piactl";
             }
             if(description.ToLower().Contains("mac"))
             {
