@@ -4,13 +4,21 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('Linux'))">Cmpnnt.Pia.DependencyInjection.Linux</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('Windows'))">Cmpnnt.Pia.DependencyInjection.Windows</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'">Cmpnnt.Pia.DependencyInjection.MacOs.x64</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'">Cmpnnt.Pia.DependencyInjection.MacOs.arm64</PackageId>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('Linux'))">linux-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('Windows'))">win-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'">osx-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'">osx-arm64</RuntimeIdentifier>
         <PackageId>Cmpnnt.Pia.DependencyInjection</PackageId>
         <Version>0.1.0</Version>
         <Title>PIA Sharp - Dependency Injection</Title>
         <description>Dependency injection support for PIA Sharp, a .NET/C# wrapper around the Private Internet Access VPN CLI</description>
         <Copyright>2023 Cmpnnt</Copyright>
         <PackageProjectUrl>https://github.com/cmpnnt/pia-sharp</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/cmpnnt/pia-sharp/blob/main/LICENSE.txt</PackageLicenseUrl>
+        <PackageLicense>https://github.com/cmpnnt/pia-sharp/blob/main/LICENSE.txt</PackageLicense>
         <RepositoryUrl>https://github.com/cmpnnt/pia-sharp</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>PIA, private internet access, VPN</PackageTags>

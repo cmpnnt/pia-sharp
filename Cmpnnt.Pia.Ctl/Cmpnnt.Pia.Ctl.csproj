@@ -8,14 +8,19 @@
         <Nullable>enable</Nullable>
         <RootNamespace>Cmpnnt.Pia.Ctl</RootNamespace>
         <PackageId Condition="$([MSBuild]::IsOsPlatform('Linux'))">Cmpnnt.Pia.Ctl.Linux</PackageId>
-        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX'))">Cmpnnt.Pia.Ctl.Mac</PackageId>
         <PackageId Condition="$([MSBuild]::IsOsPlatform('Windows'))">Cmpnnt.Pia.Ctl.Windows</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'">Cmpnnt.Pia.Ctl.MacOs.x64</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'">Cmpnnt.Pia.Ctl.MacOs.arm64</PackageId>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('Linux'))">linux-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('Windows'))">win-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'">osx-x64</RuntimeIdentifier>
+        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'">osx-arm64</RuntimeIdentifier>
         <Version>0.1.0</Version>
         <Title>PIA Sharp</Title>
         <Description>A .NET/C# wrapper around the Private Internet Access VPN CLI</Description>
         <Copyright>2023 Cmpnnt</Copyright>
         <PackageProjectUrl>https://github.com/cmpnnt/pia-sharp</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/cmpnnt/pia-sharp/blob/main/LICENSE.txt</PackageLicenseUrl>
+        <PackageLicense>https://github.com/cmpnnt/pia-sharp/blob/main/LICENSE.txt</PackageLicense>
         <RepositoryUrl>https://github.com/cmpnnt/pia-sharp</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>PIA, private internet access, VPN</PackageTags>
