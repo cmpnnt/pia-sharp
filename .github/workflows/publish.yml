@@ -1,0 +1,23 @@
+﻿name: publish to nuget
+on:
+  push:
+    branches:
+      - main
+jobs:
+  get_version_numbers:
+    runs-on: ubuntu-latest
+    outputs:
+      ctl-version-number: ${{ steps.get-ctl-version.outputs.version }}
+      di-version-number: ${{ steps.get-di-version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get Cmpnnt.Pia.Ctl Version
+        id: get-ctl-version
+        env:
+          regex: '##\s\[([0-9\.]+)\]\s-\s[0-9]{4}-[0-9]{2}-[0-9]{2}'
+        run: echo version=$(sed -nr "s/$regex/\1/p" Cmpnnt.Pia.Ctl/Changelog.md | head -n1) >> $GITHUB_OUTPUT
+      - name: Get Cmpnnt.Pia.DependencyInjection Version
+        id: get-di-version
+        env:
+          regex: '##\s\[([0-9\.]+)\]\s-\s[0-9]{4}-[0-9]{2}-[0-9]{2}'
+        run: echo version=$(sed -nr "s/$regex/\1/p" Cmpnnt.Pia.DependencyInjection/Changelog.md | head -n1) >> $GITHUB_OUTPUT
