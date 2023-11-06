@@ -13,13 +13,14 @@ The Nuget packages comes in "plain" and dependency-injected versions. The plain 
 references the appropriate version for your OS and architecture. I recommend using this package instead of directly referencing
 the system-specific packages. To include it in your project, run:
 
-`some nuget command`
+`dotnet add package cmpnnt.pia.ctl`
 
 To include the dependency injected version in your project, run the following command. This version references the
 meta-package of the plain version, so you do not need to install it explicitly.
 
-`some other nuget command`
+`dotnet add package cmpnnt.pia.dependencyinjection`
 
 ## Developer Documentation
 
-See the [API reference](#) for more detailed documentation.
+> TODO: Add link to developer documentation
+See the [API reference]((http://todo)) for more detailed documentation.

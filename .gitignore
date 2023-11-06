@@ -37,5 +37,8 @@ TestResults
 # Visual Studio 2015
 .vs/
 
+# Nuget
+nuget.config
+
 # Miscellaneous
 TODO.md

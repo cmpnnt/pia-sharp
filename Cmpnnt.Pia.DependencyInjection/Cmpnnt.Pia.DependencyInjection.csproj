@@ -2,36 +2,60 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
+        <PublishAot>true</PublishAot>
+        <StripSymbols>true</StripSymbols>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <PackageId Condition="$([MSBuild]::IsOsPlatform('Linux'))">Cmpnnt.Pia.DependencyInjection.Linux</PackageId>
-        <PackageId Condition="$([MSBuild]::IsOsPlatform('Windows'))">Cmpnnt.Pia.DependencyInjection.Windows</PackageId>
-        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'">Cmpnnt.Pia.DependencyInjection.MacOs.x64</PackageId>
-        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'">Cmpnnt.Pia.DependencyInjection.MacOs.arm64</PackageId>
+        <RootNamespace>Cmpnnt.Pia.DependencyInjection</RootNamespace>
         <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('Linux'))">linux-x64</RuntimeIdentifier>
         <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('Windows'))">win-x64</RuntimeIdentifier>
         <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'">osx-x64</RuntimeIdentifier>
         <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'">osx-arm64</RuntimeIdentifier>
-        <PackageId>Cmpnnt.Pia.DependencyInjection</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+    </ItemGroup>
+    
+    <ItemGroup Condition="'$(IsAction)' != 'true'">
+        <ProjectReference Condition="'$(GITHUB_ACTIONS)' != 'true'" Include="..\Cmpnnt.Pia.Ctl\Cmpnnt.Pia.Ctl.csproj" />
+        <PackageReference Condition="'$(GITHUB_ACTIONS)' == 'true'" Include="Cmpnnt.Pia.Ctl" />
+    </ItemGroup>
+
+
+    <!-- Begin: Nuget/Package settings -->
+    <PropertyGroup>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('Linux'))">Cmpnnt.Pia.DependencyInjection.Linux</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('Windows'))">Cmpnnt.Pia.DependencyInjection.Windows</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'">Cmpnnt.Pia.DependencyInjection.MacOs.x64</PackageId>
+        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'">Cmpnnt.Pia.DependencyInjection.MacOs.arm64</PackageId>
         <Version>0.1.0</Version>
-        <Title>PIA Sharp - Dependency Injection</Title>
-        <description>Dependency injection support for PIA Sharp, a .NET/C# wrapper around the Private Internet Access VPN CLI</description>
+        <Title>PIA Sharp</Title>
+        <Description>A .NET/C# wrapper around the Private Internet Access VPN CLI</Description>
         <Copyright>2023 Cmpnnt</Copyright>
         <PackageProjectUrl>https://github.com/cmpnnt/pia-sharp</PackageProjectUrl>
         <PackageLicense>https://github.com/cmpnnt/pia-sharp/blob/main/LICENSE.txt</PackageLicense>
         <RepositoryUrl>https://github.com/cmpnnt/pia-sharp</RepositoryUrl>
+        <packageReadmeFile>README.md</packageReadmeFile>
         <RepositoryType>git</RepositoryType>
         <PackageTags>PIA, private internet access, VPN</PackageTags>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
-      <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
     </ItemGroup>
+
+    <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Cmpnnt.Pia.Ctl\Cmpnnt.Pia.Ctl.csproj" />
+        <None Include="README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
-
+    <!-- End: Nuget/Package settings -->
+    
 </Project>

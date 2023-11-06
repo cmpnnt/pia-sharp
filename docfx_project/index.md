@@ -19,7 +19,7 @@ There are two ways to use `Cmpnnt.Pia.Ctl`: [Dependency Injection](#dependency-i
 ### Dependency Injection
 
 There's a separate dependency injection library you can use if you require DI. Add a reference to
-[Cmpnnt.Pia.DependencyInjection](https://nuget.org/XXX) and include it in your DI container by adding
+[Cmpnnt.Pia.DependencyInjection](https://nuget.org/packages/cmpnnt.pia.dependencyinjection) and include it in your DI container by adding
 a call to `services.AddPiaCtl()` under `ConfigureServices`.
 
 > [!NOTE]
@@ -68,7 +68,7 @@ using IHost host = Host.CreateDefaultBuilder(args)
 ### Instantiation
 
 If you don't need DI, you can use the command-line wrapper by itself by including a reference to `Cmpnnt.Pia.Ctl`, available as a
-[nuget package](https://nuget.org/XXX).
+[nuget package](https://nuget.org/packages/cmpnnt.pia.ctl).
 
 ```csharp
 PiaCtl pia = new PiaCtl();
@@ -82,8 +82,10 @@ Full API documentation is available in the [API Reference](api/index.md).
 
 ### Commands
 
+> TODO: Add link to developer documentation
+
 `Cmpnnt.Pia.Ctl` allows access to every command exposed by `piactl`. The methods are all asynchronous, but don't include the `async` suffix.
-The available commands are as follows. See [the API reference](http://google.com) for detailed developer documentation.
+The available commands are as follows. See [the API reference](http://todo) for detailed developer documentation.
 
 ### Results (command line output)
 
