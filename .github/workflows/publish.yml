@@ -28,6 +28,7 @@ jobs:
         run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/cmpnnt/index.json"
   package_linux:
     runs-on: ubuntu-latest
+    needs: get_version_numbers
     steps:
       - uses: actions/checkout@v4
       - name: Create Package for Linux
