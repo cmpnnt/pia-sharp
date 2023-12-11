@@ -9,7 +9,7 @@ jobs:
       ctl-version-number: ${{ steps.get-ctl-version.outputs.version }}
       di-version-number: ${{ steps.get-di-version.outputs.version }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Get Cmpnnt.Pia.Ctl Version
         id: get-ctl-version
         env:
@@ -29,9 +29,10 @@ jobs:
   package_linux:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Create Package for Linux
         id: create-package-linux
-        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get-ctl-version-number.outputs.ctl-version-number }}
+        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get-ctl-version-number.outputs.ctl-version-number }} Cmpnnt.Pia.Ctl/Cmpnnt.Pia.Ctl.csproj
   #TODO: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get-ctl-version-number.outputs.ctl-version-number }}
   # and remove the `version` property from the .csproj files. The version number should come only from the changelog
   # package on PR to verify but only push the package on main
