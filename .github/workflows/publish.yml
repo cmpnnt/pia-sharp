@@ -1,4 +1,4 @@
-﻿name: "Publish Linux to Nuget"
+name: "Publish Linux to Nuget"
 
 on:
   workflow_dispatch 
