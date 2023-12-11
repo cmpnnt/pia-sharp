@@ -1,12 +1,9 @@
-﻿# Your GitHub workflow file under .github/workflows/
+﻿name: "Publish Documentation"
 
 on:
-  pull_request:
-    types:
-      - closed
+  workflow_dispatch
 jobs:
   publish-docs:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

@@ -8,7 +8,6 @@
         <Nullable>enable</Nullable>
         <RootNamespace>Cmpnnt.Pia.Ctl</RootNamespace>
         <PackageId>Cmpnnt.Pia.Ctl</PackageId>
-        <Version>0.1.0</Version>
         <Title>PIA Sharp</Title>
         <Description>A .NET/C# wrapper around the Private Internet Access VPN CLI</Description>
         <Copyright>2023 Cmpnnt</Copyright>

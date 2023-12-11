@@ -1,8 +1,7 @@
-﻿name: publish to nuget
+﻿name: "Publish Linux to Nuget"
+
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch 
 jobs:
   get_version_numbers:
     runs-on: ubuntu-latest
@@ -21,16 +20,21 @@ jobs:
         env:
           regex: '##\s\[([0-9\.]+)\]\s-\s[0-9]{4}-[0-9]{2}-[0-9]{2}'
         run: echo version=$(sed -nr "s/$regex/\1/p" Cmpnnt.Pia.DependencyInjection/Changelog.md | head -n1) >> $GITHUB_OUTPUT
-        
-#TODO: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.create_comment.outputs.ctl-version-number }}
+  add_nuget_source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Github Nuget Source
+        id: add-github-nuget-source
+        run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/cmpnnt/index.json"
+  package_linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Package for Linux
+        id: create-package-linux
+        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get-ctl-version-number.outputs.ctl-version-number }}
+  #TODO: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get-ctl-version-number.outputs.ctl-version-number }}
   # and remove the `version` property from the .csproj files. The version number should come only from the changelog
   # package on PR to verify but only push the package on main
   
-#TODO: add changelog verify step for fail fast
-  # version number must be different from previous entry
-  # version number must be changed (check last package version number)
-  # version header ## must conform to certain regex
-  # change log sub-header ### must be one of Added, Changed, Deprecated, Fixed, Removed, Security (case-insensitive, but convert to Title Case) 
-  # change log entry must have at least one line starting with a dash containing a description and be preceded by an empty line
   
 # TODO: Consider other fail fast items and CI job order and dependencies
