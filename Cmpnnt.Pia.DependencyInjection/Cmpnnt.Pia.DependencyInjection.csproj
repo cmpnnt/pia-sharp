@@ -31,7 +31,6 @@
         <PackageId Condition="$([MSBuild]::IsOsPlatform('Windows'))">Cmpnnt.Pia.DependencyInjection.Windows</PackageId>
         <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'">Cmpnnt.Pia.DependencyInjection.MacOs.x64</PackageId>
         <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'">Cmpnnt.Pia.DependencyInjection.MacOs.arm64</PackageId>
-        <Version>0.1.0</Version>
         <Title>PIA Sharp</Title>
         <Description>A .NET/C# wrapper around the Private Internet Access VPN CLI</Description>
         <Copyright>2023 Cmpnnt</Copyright>

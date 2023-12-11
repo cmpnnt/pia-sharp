@@ -1,0 +1,78 @@
+﻿name: "Create Changelog"
+
+on:
+  workflow_dispatch
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Get Next Version
+        id: semver
+        uses: ietf-tools/semver-action@v1.5.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          majorList: breaking, major
+          minorList: feat, feature
+          patchList: fix, bugfix, perf, refactor, docs, test, tests
+
+      - name: Create Draft Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          prerelease: true
+          draft: false
+          commit: ${{ github.sha }}
+          tag: ${{ steps.semver.outputs.next }}
+          name: ${{ steps.semver.outputs.next }}
+          body: '*pending*'
+          token: ${{ secrets.API_PAT }}
+
+      - name: Update CHANGELOG
+        id: changelog
+        uses: requarks/changelog-action@v1
+        with:
+          token: ${{ secrets.API_PAT  }}
+          tag: ${{ steps.semver.outputs.next }}
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          allowUpdates: true
+          draft: false
+          makeLatest: true
+          tag: ${{ steps.semver.outputs.next }}
+          name: ${{ steps.semver.outputs.next }}
+          body: ${{ steps.changelog.outputs.changes }}
+          token: ${{ secrets.API_PAT }}
+
+      - name: Create Release (Major-only)
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          allowUpdates: true
+          draft: false
+          commit: ${{ github.sha }}
+          tag: ${{ steps.semver.outputs.nextMajor }}
+          name: ${{ steps.semver.outputs.nextMajor }}
+          body: ${{ steps.changelog.outputs.changes }}
+          token: ${{ secrets.API_PAT }}
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
+
+      - name: Commit CHANGELOG.md
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: ${{ steps.extract_branch.outputs.branch }}
+          commit_message: 'docs: update CHANGELOG.md for ${{ github.ref_name }} [skip ci]'
+          file_pattern: CHANGELOG.md
