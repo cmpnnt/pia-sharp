@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <PublishAot>true</PublishAot>
         <StripSymbols>true</StripSymbols>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -19,12 +19,10 @@
         <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
     </ItemGroup>
     
-    <ItemGroup Condition="'$(IsAction)' != 'true'">
-        <ProjectReference Condition="'$(GITHUB_ACTIONS)' != 'true'" Include="..\Cmpnnt.Pia.Ctl\Cmpnnt.Pia.Ctl.csproj" />
-        <PackageReference Condition="'$(GITHUB_ACTIONS)' == 'true'" Include="Cmpnnt.Pia.Ctl" />
+    <ItemGroup>
+        <ProjectReference Include="..\Cmpnnt.Pia.Ctl\Cmpnnt.Pia.Ctl.csproj" />
     </ItemGroup>
-
-
+    
     <!-- Begin: Nuget/Package settings -->
     <PropertyGroup>
         <PackageId Condition="$([MSBuild]::IsOsPlatform('Linux'))">Cmpnnt.Pia.DependencyInjection.Linux</PackageId>

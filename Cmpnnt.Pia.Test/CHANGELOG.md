@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > Note: The version numbers here represent the overall version of the repository and may correspond to version numbers
 > of the individual projects. See the `Changelog.md` files in each project directory for the relevant version info.
 
-## [0.1.0] - 2023-07-15
+## [v0.1.0] - 2023-07-15
 
 ### Added
 
