@@ -1,6 +1,7 @@
 # Cmpnnt.Pia.Ctl
 
-`Cmpnnt.Pia.Ctl` is a .NET wrapper around `piactl`, the Private Internet Access CLI for Windows and Linux (MacOS support is coming with .NET 8).
+`Cmpnnt.Pia.Ctl` is a .NET wrapper around `piactl`, the Private Internet Access CLI for Windows and Linux. 
+MacOS support will be added when GitHub makes free runners available.
 
 PIA Sharp's main package, Cmpnnt.Pia.Ctl, has been tested against version 3.3.1 on Windows and Linux. It provides access to every 
 piactl command available in those version on those systems. It might also work on other versions of piactl, provided they expose 

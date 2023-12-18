@@ -4,8 +4,9 @@
 [Private Internet Access](https://privateinternetaccess.com) VPN. It's available on [Nuget](https://nuget.org/profiles/cmpnnt)
 (currently version 0.1.0).
 
-> MacOS is currently unsupported because the .NET 7 SDK only supports Native AOT for Windows and Linux. MacOS support is
-> coming in .NET 8, at which point this library will be updated.
+> MacOS is currently unsupported because there are no free MacOS GitHub action runners available that support .NET 8.
+> There are older (Intel) MacOS runners available for free, but they only support up to .NET 7. 
+> This repository will be updated to build MacOS packages if and when this changes.
 
 ## Installation
 
