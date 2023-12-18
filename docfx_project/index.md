@@ -118,9 +118,7 @@ sudo apk add clang build-base zlib-dev
 
 ### MacOS
 
-`Cmpnnt.Pia.Ctl` currently does not support MacOS because Dotnet 7 does not yet support it for Native AOT. Dotnet 8 will
-include MacOS, at which time this library will be updated and Nuget packages will be released. When that happens, you'll
-need to install the latest [Command Line Tools for XCode](https://developer.apple.com/download/) to compile this project.
+To compile on MacOS, you'll need to install the latest [Command Line Tools for XCode](https://developer.apple.com/download/).
 
 ## References
 

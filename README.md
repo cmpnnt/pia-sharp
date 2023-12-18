@@ -1,6 +1,6 @@
 # PIA Sharp README
 
-`Cmpnnt.Pia.Ctl` is a .NET 7 Native AOT wrapper around the `piactl` command line tool for the
+`Cmpnnt.Pia.Ctl` is a .NET Native AOT wrapper around the `piactl` command line tool for the
 [Private Internet Access](https://privateinternetaccess.com) VPN. It's available on [Nuget](https://nuget.org/profiles/cmpnnt)
 (currently version 0.1.0).
 
