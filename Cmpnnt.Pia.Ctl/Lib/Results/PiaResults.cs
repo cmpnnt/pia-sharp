@@ -22,7 +22,7 @@ public record PiaResults : ICliResults
     /// <summary>
     /// Represents the status of the completed PIA command.
     /// </summary>
-    [JsonConverter(typeof(JsonStringEnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter<Status>))]
     public Status Status { get; set; } = Status.NotStarted;
 
     /// <summary>

@@ -84,3 +84,5 @@ jobs:
 # TODO: Figure out how to conditionally compile and publish packages based on whether their changelog has changed.
 # TODO: remove github nuget sources and replace with nuget.org
 # TODO: change workflow triggers. PR/Merge should trigger changelog. Changelog should trigger both documentation and publish workflows
+# TODO: make public and publish documentation to github page
+# TODO: add tests to github actions
