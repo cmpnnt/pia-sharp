@@ -20,11 +20,19 @@
     </PropertyGroup>
     
     <ItemGroup>
-        <PackageReference Condition="$([MSBuild]::IsOsPlatform('Windows'))" Include="Cmpnnt.Pia.Ctl.Windows" />
-        <PackageReference Condition="$([MSBuild]::IsOsPlatform('Linux'))" Include="Cmpnnt.Pia.Ctl.Linux" />
-        <PackageReference Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'" Include="Cmpnnt.Pia.Ctl.MacOs.x64" />
-        <PackageReference Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'" Include="Cmpnnt.Pia.Ctl.MacOs.arm64" />
+        <PackageReference Include="Cmpnnt.Pia.Ctl.Windows" />
+        <PackageReference Include="Cmpnnt.Pia.Ctl.Linux" />
+        <!--<PackageReference Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'" Include="Cmpnnt.Pia.Ctl.MacOs.x64" />-->
+        <!--<PackageReference Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'" Include="Cmpnnt.Pia.Ctl.MacOs.arm64" />-->
     </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+    </ItemGroup>
+
+    <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
 
     <ItemGroup>
         <None Include="../Cmpnnt.Pia.Ctl/README.md" Pack="true" PackagePath="\"/>

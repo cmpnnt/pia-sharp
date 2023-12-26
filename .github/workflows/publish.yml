@@ -82,7 +82,12 @@ jobs:
         run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ runner.os }}.${{ needs.get_version_numbers.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
         
 # TODO: Figure out how to conditionally compile and publish packages based on whether their changelog has changed.
+# TODO: the DI package should not be compiled per OS. It should reference the ctl meta package that has the condiaional logic.
+# TODO: Consider putting the `ensure_packages` step into its own workflow that gets triggered on demand (to save runner time credits).
+  # I can run it manually when a PR is submitted and passes all the tests and other checks. I build the package and report back to the author if anything needs fixing.
 # TODO: remove github nuget sources and replace with nuget.org
 # TODO: change workflow triggers. PR/Merge should trigger changelog. Changelog should trigger both documentation and publish workflows
 # TODO: make public and publish documentation to github page
 # TODO: add tests to github actions
+
+
