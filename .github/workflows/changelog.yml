@@ -1,4 +1,4 @@
-﻿name: "Create Changelog"
+﻿name: "Update Changelog"
 
 on:
   workflow_dispatch
@@ -23,7 +23,7 @@ jobs:
           branch: main
           majorList: breaking, major
           minorList: feat, feature
-          patchList: fix, bugfix, perf, refactor, docs, test, tests
+          patchList: fix, bugfix, perf, refactor, docs, test, tests, ci
 
       - name: Create Draft Release
         uses: ncipollo/release-action@v1.12.0
