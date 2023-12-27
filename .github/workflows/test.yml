@@ -1,0 +1,18 @@
+﻿name: "Test"
+on:
+  pull_request:
+    types: [labeled]
+jobs:
+  run_all:
+    name: "Run All Tests"
+    if: ${{ github.event.label.name == 'test' }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Dotnet Test
+        run: dotnet test Cmpnnt.Pia.Test
+    

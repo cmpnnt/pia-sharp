@@ -1,7 +1,11 @@
 name: "Publish to Nuget"
 
 on:
-  workflow_dispatch 
+  workflow_run:
+    workflows:
+      - "Update Changelog"
+    types:
+      - completed
 permissions:
   packages: write
   contents: read
@@ -29,28 +33,12 @@ jobs:
       - name: Check di version number
         if: steps.get-di-version.outputs == ''
         run: echo "error parsing version number from ctl changelog"; exit 1
-  ensure_packages: # on PRs
+  publish_ctl_package:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
     needs: get_version_numbers
-    if: ${{ !github.event.pull_request.merged }}
-    steps:
-      - uses: actions/checkout@v4
-      - name: Create Ctl Package
-        id: create-ctl-package
-        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_version_numbers.outputs.ctl-version-number }} Cmpnnt.Pia.Ctl/Cmpnnt.Pia.Ctl.csproj
-      - name: Create DI Package
-        id: create-di-package
-        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_version_numbers.outputs.di-version-number }} Cmpnnt.Pia.DependencyInjection/Cmpnnt.Pia.DependencyInjection.csproj
-  publish_ctl_package: # on merge to main
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-    needs: get_version_numbers
-    if: ${{ github.event.pull_request.merged }}
     steps:
       - uses: actions/checkout@v4
       - name: Add Github Nuget Source
@@ -62,13 +50,12 @@ jobs:
       - name: Push Ctl Package to Nuget
         id: push-ctl-package
         run: dotnet nuget push 'Cmpnnt.Pia.Ctl/bin/Release/Cmpnnt.Pia.Ctl.${{ runner.os }}.${{ needs.get_version_numbers.outputs.ctl-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
-  publish_di_package: # on merge to main
+  publish_di_package:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
     needs: get_version_numbers
-    if: ${{ github.event.pull_request.merged }}
     steps:
       - uses: actions/checkout@v4
       - name: Add Github Nuget Source
@@ -82,9 +69,7 @@ jobs:
         run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ runner.os }}.${{ needs.get_version_numbers.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
         
 # TODO: Figure out how to conditionally compile and publish packages based on whether their changelog has changed.
-# TODO: the DI package should not be compiled per OS. It should reference the ctl meta package that has the condiaional logic.
-# TODO: Consider putting the `ensure_packages` step into its own workflow that gets triggered on demand (to save runner time credits).
-  # I can run it manually when a PR is submitted and passes all the tests and other checks. I build the package and report back to the author if anything needs fixing.
+# TODO: the DI package should not be compiled per OS. It should reference the ctl meta package that has the conditional logic.
 # TODO: remove github nuget sources and replace with nuget.org
 # TODO: change workflow triggers. PR/Merge should trigger changelog. Changelog should trigger both documentation and publish workflows
 # TODO: make public and publish documentation to github page

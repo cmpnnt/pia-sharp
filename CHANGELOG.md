@@ -15,3 +15,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Usage examples
 - Documentation
 - Tests
+
+[v0.1.0]: https://github.com/cmpnnt/pia-sharp/compare/v0...v0.1.0
