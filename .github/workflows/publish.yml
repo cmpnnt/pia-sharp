@@ -1,7 +1,11 @@
 name: "Publish to Nuget"
 
 on:
-  workflow_dispatch 
+  workflow_run:
+    workflows:
+      - "Update Changelog"
+    types:
+      - completed
 permissions:
   packages: write
   contents: read
