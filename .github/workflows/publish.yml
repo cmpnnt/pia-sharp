@@ -33,22 +33,7 @@ jobs:
       - name: Check di version number
         if: steps.get-di-version.outputs == ''
         run: echo "error parsing version number from ctl changelog"; exit 1
-  ensure_packages: # on PRs
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-    needs: get_version_numbers
-    if: ${{ !github.event.pull_request.merged }}
-    steps:
-      - uses: actions/checkout@v4
-      - name: Create Ctl Package
-        id: create-ctl-package
-        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_version_numbers.outputs.ctl-version-number }} Cmpnnt.Pia.Ctl/Cmpnnt.Pia.Ctl.csproj
-      - name: Create DI Package
-        id: create-di-package
-        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_version_numbers.outputs.di-version-number }} Cmpnnt.Pia.DependencyInjection/Cmpnnt.Pia.DependencyInjection.csproj
-  publish_ctl_package: # on merge to main
+  publish_ctl_package:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -66,7 +51,7 @@ jobs:
       - name: Push Ctl Package to Nuget
         id: push-ctl-package
         run: dotnet nuget push 'Cmpnnt.Pia.Ctl/bin/Release/Cmpnnt.Pia.Ctl.${{ runner.os }}.${{ needs.get_version_numbers.outputs.ctl-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
-  publish_di_package: # on merge to main
+  publish_di_package:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
