@@ -1,10 +1,15 @@
 # PIA Sharp
 
-For basic installation instructions, see the [main readme](https://github.com/cmpnnt/pia-sharp#readme).
+`Cmpnnt.Pia.Ctl` is a .NET Native AOT wrapper around the `piactl` command line tool for the
+[Private Internet Access](https://privateinternetaccess.com) VPN. It's available on [Nuget](https://nuget.org/profiles/cmpnnt) and supports Windows and Linux.
+
+> MacOS is currently unsupported because there are no free MacOS GitHub action runners available that support .NET 8.
+> There are older (Intel) MacOS runners available for free, but they only support up to .NET 7.
+> This repository will be updated to build MacOS packages if and when this changes.
 
 ## Compatibility
 
-PIA Sharp's main package, `Cmpnnt.Pia.Ctl`, has been tested against version `3.3.1` on Windows and Linux (MacOS is unsupported until .NET 8). 
+PIA Sharp's main package, `Cmpnnt.Pia.Ctl`, has been tested against version `3.3.1` on Windows and Linux. 
 It provides access to every `piactl` command available in those version on those systems. It might also work on other 
 versions of `piactl`, provided they expose the same commands with the same parameters. However, this hasn't 
 been tested and nothing is guaranteed.
@@ -95,7 +100,7 @@ for each of stdout and stderr output. The `ToString()` method has been overridde
 
 ## Compiling
 
-Because `Cmpnnt.Pia.Ctl` is a .NET 7 Native AOT library, it requires additional tooling to compile. 
+Because `Cmpnnt.Pia.Ctl` is a .NET 8 Native AOT library, it requires additional tooling to compile. 
 
 ### Windows
 
