@@ -49,7 +49,7 @@ jobs:
           https://api.github.com/user/packages/nuget/cmpnnt.pia.ctl.linux/versions \
           | jq -r '.[0].name') >> $GITHUB_OUTPUT
       - name: Get Published Get Cmpnnt.Pia.DependencyInjection Version
-        id: get-di-package-version # TODO: remove the OS from the package name once the DI package uses the ctl metapackage
+        id: get-di-package-version # TODO: remove the OS from the package name in the url once the DI package uses the ctl metapackage
         run: |
           echo version=$(curl -L \
           -H "Accept: application/vnd.github+json" \
@@ -57,7 +57,7 @@ jobs:
           -H "X-GitHub-Api-Version: 2022-11-28" \
           https://api.github.com/user/packages/nuget/cmpnnt.pia.dependencyinjection.linux/versions \
           | jq -r '.[0].name') >> $GITHUB_OUTPUT
-  publish_ctl_package: # TODO: put a conditional here to check the published version vs the changelog version
+  publish_ctl_package:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -102,5 +102,3 @@ jobs:
 # TODO: add linux tests to test workflow
   
 # TODO: determine a way to automatically update the relevant changelogs when conventional commits are added to any given package
-# TODO: Figure out how to conditionally compile and publish packages based on whether their changelog has changed.
-
