@@ -10,7 +10,7 @@ permissions:
   packages: write
   contents: read
 jobs:
-  get_version_numbers:
+  get_changelog_versions:
     runs-on: ubuntu-latest
     outputs:
       ctl-version-number: ${{ steps.get-ctl-version.outputs.version }}
@@ -33,12 +33,37 @@ jobs:
       - name: Check di version number
         if: steps.get-di-version.outputs == ''
         run: echo "error parsing version number from ctl changelog"; exit 1
-  publish_ctl_package:
+  get_published_packages_versions: # The version numbers are the same for all OSes, so only getting Linux here
+    runs-on: ubuntu-latest
+    outputs:
+      ctl-package-version: ${{ steps.get-ctl-package-version.outputs.version }}
+      di-package-version: ${{ steps.get-di-package-version.outputs.version }}
+    steps:
+      - name: Get Published Get Cmpnnt.Pia.Ctl Version
+        id: get-ctl-package-version
+        run: | 
+          echo version=$(curl -L \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.PACKAGES_PAT }}" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          https://api.github.com/user/packages/nuget/cmpnnt.pia.ctl.linux/versions \
+          | jq -r '.[0].name') >> $GITHUB_OUTPUT
+      - name: Get Published Get Cmpnnt.Pia.DependencyInjection Version
+        id: get-di-package-version # TODO: remove the OS from the package name once the DI package uses the ctl metapackage
+        run: |
+          echo version=$(curl -L \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.PACKAGES_PAT }}" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          https://api.github.com/user/packages/nuget/cmpnnt.pia.dependencyinjection.linux/versions \
+          | jq -r '.[0].name') >> $GITHUB_OUTPUT
+  publish_ctl_package: # TODO: put a conditional here to check the published version vs the changelog version
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-    needs: get_version_numbers
+    needs: [get_changelog_versions, get_published_packages_versions]
+    if: needs.get_changelog_versions.outputs.ctl-version-number != needs.get_published_packages_versions.outputs.ctl-package-version
     steps:
       - uses: actions/checkout@v4
       - name: Add Github Nuget Source
@@ -46,16 +71,17 @@ jobs:
         run: dotnet nuget add source --username cmpnnt --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/cmpnnt/index.json"
       - name: Create Ctl Package
         id: create-ctl-package
-        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_version_numbers.outputs.ctl-version-number }} Cmpnnt.Pia.Ctl/Cmpnnt.Pia.Ctl.csproj
+        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_changelog_versions.outputs.ctl-version-number }} Cmpnnt.Pia.Ctl/Cmpnnt.Pia.Ctl.csproj
       - name: Push Ctl Package to Nuget
         id: push-ctl-package
-        run: dotnet nuget push 'Cmpnnt.Pia.Ctl/bin/Release/Cmpnnt.Pia.Ctl.${{ runner.os }}.${{ needs.get_version_numbers.outputs.ctl-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
+        run: dotnet nuget push 'Cmpnnt.Pia.Ctl/bin/Release/Cmpnnt.Pia.Ctl.${{ runner.os }}.${{ needs.get_changelog_versions.outputs.ctl-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
   publish_di_package:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-    needs: get_version_numbers
+    needs: [get_changelog_versions, get_published_packages_versions]
+    if: needs.get_changelog_versions.outputs.di-version-number != needs.get_published_packages_versions.outputs.di-package-version
     steps:
       - uses: actions/checkout@v4
       - name: Add Github Nuget Source
@@ -63,16 +89,18 @@ jobs:
         run: dotnet nuget add source --username cmpnnt --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/cmpnnt/index.json"
       - name: Create DI Package
         id: create-di-package
-        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_version_numbers.outputs.di-version-number }} Cmpnnt.Pia.DependencyInjection/Cmpnnt.Pia.DependencyInjection.csproj
+        run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_changelog_versions.outputs.di-version-number }} Cmpnnt.Pia.DependencyInjection/Cmpnnt.Pia.DependencyInjection.csproj
       - name: Push DI Package to Nuget
         id: push-di-package
-        run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ runner.os }}.${{ needs.get_version_numbers.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
+        run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ runner.os }}.${{ needs.get_changelog_versions.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
         
-# TODO: Figure out how to conditionally compile and publish packages based on whether their changelog has changed.
+
 # TODO: the DI package should not be compiled per OS. It should reference the ctl meta package that has the conditional logic.
 # TODO: remove github nuget sources and replace with nuget.org
 # TODO: change workflow triggers. PR/Merge should trigger changelog. Changelog should trigger both documentation and publish workflows
 # TODO: make public and publish documentation to github page
-# TODO: add tests to github actions
-
+# TODO: add linux tests to test workflow
+  
+# TODO: determine a way to automatically update the relevant changelogs when conventional commits are added to any given package
+# TODO: Figure out how to conditionally compile and publish packages based on whether their changelog has changed.
 
