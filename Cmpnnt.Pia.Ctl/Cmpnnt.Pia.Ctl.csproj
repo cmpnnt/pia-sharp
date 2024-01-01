@@ -3,22 +3,15 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <PublishAot>true</PublishAot>
-        <StripSymbols>true</StripSymbols>
+        <TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Cmpnnt.Pia.Ctl</RootNamespace>
-        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('Linux'))">linux-x64</RuntimeIdentifier>
-        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('Windows'))">win-x64</RuntimeIdentifier>
-        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'">osx-x64</RuntimeIdentifier>
-        <RuntimeIdentifier Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'">osx-arm64</RuntimeIdentifier>
     </PropertyGroup>
     
     <!-- Begin: Nuget/Package settings -->
     <PropertyGroup>
-        <PackageId Condition="$([MSBuild]::IsOsPlatform('Linux'))">Cmpnnt.Pia.Ctl.Linux</PackageId>
-        <PackageId Condition="$([MSBuild]::IsOsPlatform('Windows'))">Cmpnnt.Pia.Ctl.Windows</PackageId>
-        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='X64'">Cmpnnt.Pia.Ctl.MacOs.x64</PackageId>
-        <PackageId Condition="$([MSBuild]::IsOsPlatform('OSX')) and $([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)=='Arm64'">Cmpnnt.Pia.Ctl.MacOs.arm64</PackageId>
+        <PackageId>Cmpnnt.Pia.Ctl</PackageId>
         <Title>PIA Sharp</Title>
         <Description>A .NET/C# wrapper around the Private Internet Access VPN CLI</Description>
         <Copyright>2023 Cmpnnt</Copyright>
@@ -31,17 +24,15 @@
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
     </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
-    </ItemGroup>
-
+    
     <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
         <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     </PropertyGroup>
     
     <ItemGroup>
-        <None Include="README.md" Pack="true" PackagePath="\"/>
+        <None Include="README.md" Pack="true" PackagePath="/"/>
+        <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/linux-x64/native/" Pack="true" PackagePath="/runtimes/linux-x64/native" />
+        <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/win-x64/native/" Pack="true" PackagePath="/runtimes/win-x64/native" />
     </ItemGroup>
     <!-- End: Nuget/Package settings -->
     

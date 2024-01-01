@@ -21,7 +21,7 @@ jobs:
         id: get-ctl-version
         env:
           regex: '##\s\[v([0-9\.]+)\]\s-\s[0-9]{4}-[0-9]{2}-[0-9]{2}'
-        run: echo version=$(sed -nr "s/$regex/\1/p" Cmpnnt.Pia.Ctl/CHANGELOG.md | head -n1) >> $GITHUB_OUTPUT
+        run: echo version=$(sed -nr "s/$regex/\1/p" CHANGELOG.md | head -n1) >> $GITHUB_OUTPUT
       - name: Check ctl version number
         if: steps.get-ctl-version.outputs == ''
         run: echo "error parsing version number from ctl changelog"; exit 1
@@ -29,7 +29,7 @@ jobs:
         id: get-di-version
         env:
           regex: '##\s\[v([0-9\.]+)\]\s-\s[0-9]{4}-[0-9]{2}-[0-9]{2}'
-        run: echo version=$(sed -nr "s/$regex/\1/p" Cmpnnt.Pia.DependencyInjection/CHANGELOG.md | head -n1) >> $GITHUB_OUTPUT
+        run: echo version=$(sed -nr "s/$regex/\1/p" CHANGELOG.md | head -n1) >> $GITHUB_OUTPUT
       - name: Check di version number
         if: steps.get-di-version.outputs == ''
         run: echo "error parsing version number from ctl changelog"; exit 1
@@ -49,7 +49,7 @@ jobs:
           https://api.github.com/user/packages/nuget/cmpnnt.pia.ctl.linux/versions \
           | jq -r '.[0].name') >> $GITHUB_OUTPUT
       - name: Get Published Get Cmpnnt.Pia.DependencyInjection Version
-        id: get-di-package-version # TODO: remove the OS from the package name in the url once the DI package uses the ctl metapackage
+        id: get-di-package-version
         run: |
           echo version=$(curl -L \
           -H "Accept: application/vnd.github+json" \
@@ -62,25 +62,47 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
+        include:
+          - { os: ubuntu-latest, rid_os: linux, rid_arch: x64 }
+          - { os: windows-latest, rid_os: win, rid_arch: x64 }
     needs: [get_changelog_versions, get_published_packages_versions]
     if: needs.get_changelog_versions.outputs.ctl-version-number != needs.get_published_packages_versions.outputs.ctl-package-version
     steps:
       - uses: actions/checkout@v4
+      - name: Build Ctl Project
+        id: build-ctl-project
+        run: dotnet publish -c Release -r ${{matrix.rid_os}}-${{matrix.rid_arch}} --nologo --version-suffix ${{ needs.get_changelog_versions.outputs.ctl-version-number }} Cmpnnt.Pia.Ctl/Cmpnnt.Pia.Ctl.csproj
+      - uses: actions/upload-artifact@v4
+        with: # upload the DLL files to be used in a meta-package in a later step
+          name: Cmpnnt.Pia.Ctl.dll-${{matrix.rid_os}}-${{matrix.rid_arch}}
+          path: Cmpnnt.Pia.Ctl/bin/Release/net8.0/${{matrix.rid_os}}-${{matrix.rid_arch}}/publish
+  publish_meta_package:
+    runs-on: ubuntu-latest
+    needs: [get_changelog_versions, get_published_packages_versions, publish_ctl_package]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Windows Dll
+        uses: actions/download-artifact@v4
+        with:
+          name: Cmpnnt.Pia.Ctl.dll-win-x64
+          path: Cmpnnt.Pia.Ctl.Meta/runtimes/win-x64/native
+      - name: Download Linux SO
+        uses: actions/download-artifact@v4
+        with:
+          name: Cmpnnt.Pia.Ctl.dll-linux-x64
+          path: Cmpnnt.Pia.Ctl.Meta/runtimes/linux-x64/native
       - name: Add Github Nuget Source
         id: add-github-nuget-source
         run: dotnet nuget add source --username cmpnnt --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/cmpnnt/index.json"
-      - name: Create Ctl Package
-        id: create-ctl-package
+      - name: Create Meta Package
+        id: create-meta-package
         run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_changelog_versions.outputs.ctl-version-number }} Cmpnnt.Pia.Ctl/Cmpnnt.Pia.Ctl.csproj
-      - name: Push Ctl Package to Nuget
-        id: push-ctl-package
-        run: dotnet nuget push 'Cmpnnt.Pia.Ctl/bin/Release/Cmpnnt.Pia.Ctl.${{ runner.os }}.${{ needs.get_changelog_versions.outputs.ctl-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
+      - name: Push Meta Package to Nuget
+        id: push-meta-package
+        run: dotnet nuget push 'Cmpnnt.Pia.Ctl/bin/Release/Cmpnnt.Pia.Ctl.${{ needs.get_changelog_versions.outputs.ctl-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
   publish_di_package:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-    needs: [get_changelog_versions, get_published_packages_versions]
+    runs-on: ubuntu-latest
+    needs: [get_changelog_versions, get_published_packages_versions, publish_meta_package]
     if: needs.get_changelog_versions.outputs.di-version-number != needs.get_published_packages_versions.outputs.di-package-version
     steps:
       - uses: actions/checkout@v4
@@ -92,13 +114,13 @@ jobs:
         run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_changelog_versions.outputs.di-version-number }} Cmpnnt.Pia.DependencyInjection/Cmpnnt.Pia.DependencyInjection.csproj
       - name: Push DI Package to Nuget
         id: push-di-package
-        run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ runner.os }}.${{ needs.get_changelog_versions.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
-        
+        run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ needs.get_changelog_versions.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
 
-# TODO: the DI package should not be compiled per OS. It should reference the ctl meta package that has the conditional logic.
 # TODO: remove github nuget sources and replace with nuget.org
 # TODO: change workflow triggers. PR/Merge should trigger changelog. Changelog should trigger both documentation and publish workflows
 # TODO: make public and publish documentation to github page
 # TODO: add linux tests to test workflow
+# TODO: prevent packages from being created if no changelog will be published (docs, etc).
+# TODO: figure a better way to distribute the debug symbols. Might have to create a new .nupkg file just for the debug symbols
   
-# TODO: determine a way to automatically update the relevant changelogs when conventional commits are added to any given package
+# TODO: determine a way to automatically update the relevant changelogs when conventional commits are added to any given package.
