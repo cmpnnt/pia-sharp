@@ -9,7 +9,7 @@ public class CommandLineWrapperTests
 {
     private const string Command = "echo hello";
     private const string ErrorCommand = "I throw an error.";
-    private const string TimedCommand = "sleep 2; echo hello";
+    private const string TimedCommand = "sleep 1; echo hello";
     
     [TestMethod]
     public async Task CompletedExecution()
