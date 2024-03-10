@@ -8,8 +8,8 @@ jobs:
     if: ${{ github.event.label.name == 'test' }}
     runs-on: ${{ matrix.os }}
     strategy:
-      matrix:
-        os: [windows-latest]
+      matrix: # TODO: Add MacOS
+        os: [ubuntu-latest, windows-latest]
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4

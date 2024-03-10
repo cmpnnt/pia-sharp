@@ -27,7 +27,7 @@ public static class PiaEnvironment
             }
             if(description.ToLower().Contains("mac"))
             {
-                throw new ArgumentException("MacOS is currently unsupported because of limitations in .NET 7.");
+                throw new ArgumentException("MacOS is currently unsupported.");
             }
 
             throw new ArgumentException("Unknown operating system");
