@@ -4,6 +4,8 @@ using Cmpnnt.Pia.Ctl.Lib.Results;
 
 namespace Cmpnnt.Pia.Test.Unit.Lib;
 
+// TODO: DRY these tests up.
+
 [TestClass]
 public class CommandLineWrapperTests
 {
