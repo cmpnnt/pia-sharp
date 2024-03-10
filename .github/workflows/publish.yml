@@ -57,7 +57,7 @@ jobs:
           -H "X-GitHub-Api-Version: 2022-11-28" \
           https://api.github.com/user/packages/nuget/cmpnnt.pia.dependencyinjection.linux/versions \
           | jq -r '.[0].name') >> $GITHUB_OUTPUT
-  publish_ctl_package:
+  create_ctl_packages:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -115,12 +115,13 @@ jobs:
       - name: Push DI Package to Nuget
         id: push-di-package
         run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ needs.get_changelog_versions.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
-
-# TODO: remove github nuget sources and replace with nuget.org
-# TODO: change workflow triggers. PR/Merge should trigger changelog. Changelog should trigger both documentation and publish workflows
-# TODO: make public and publish documentation to github page
-# TODO: add linux tests to test workflow
-# TODO: prevent packages from being created if no changelog will be published (docs, etc).
-# TODO: figure a better way to distribute the debug symbols. Might have to create a new .nupkg file just for the debug symbols
   
+# TODO: add linux tests to test workflow
+# TODO: remove github nuget sources and replace with nuget.org
+# TODO: Changelog should trigger both documentation and publish workflows
+# TODO: make public and publish documentation to github page
+# TODO: figure a better way to distribute the debug symbols. Might have to create a new .nupkg file just for the debug symbols
+# TODO: add macos runners and macos artifacts
 # TODO: determine a way to automatically update the relevant changelogs when conventional commits are added to any given package.
+
+# TODO: Test whether the meta package actually uses the correct native version of CTL on different OSes.
