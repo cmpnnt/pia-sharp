@@ -61,10 +61,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix: # TODO: Add MacOS
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-13, macos-14]
         include:
           - { os: ubuntu-latest, rid_os: linux, rid_arch: x64 }
           - { os: windows-latest, rid_os: win, rid_arch: x64 }
+          - { os: macos-13, rid_os: osx, rid_arch: x64 }
+          - { os: macos-14, rid_os: osx, rid_arch: arm64 }
     needs: [get_changelog_versions, get_published_packages_versions]
     if: needs.get_changelog_versions.outputs.ctl-version-number != needs.get_published_packages_versions.outputs.ctl-package-version
     steps:
@@ -81,16 +83,26 @@ jobs:
     needs: [get_changelog_versions, get_published_packages_versions, create_ctl_packages]
     steps:
       - uses: actions/checkout@v4
-      - name: Download Windows Dll
+      - name: Download Windows Library
         uses: actions/download-artifact@v4
         with:
           name: Cmpnnt.Pia.Ctl.dll-win-x64
           path: Cmpnnt.Pia.Ctl.Meta/runtimes/win-x64/native
-      - name: Download Linux SO
+      - name: Download Linux Library
         uses: actions/download-artifact@v4
         with:
           name: Cmpnnt.Pia.Ctl.dll-linux-x64
           path: Cmpnnt.Pia.Ctl.Meta/runtimes/linux-x64/native
+      - name: Download MacOS x64 Library
+        uses: actions/download-artifact@v4
+        with:
+          name: Cmpnnt.Pia.Ctl.dll-osx-x64
+          path: Cmpnnt.Pia.Ctl.Meta/runtimes/osx-x64/native
+      - name: Download MacOS ARM Library
+        uses: actions/download-artifact@v4
+        with:
+          name: Cmpnnt.Pia.Ctl.dll-osx-arm64
+          path: Cmpnnt.Pia.Ctl.Meta/runtimes/osx-arm64/native
       - name: Add Github Nuget Source
         id: add-github-nuget-source
         run: dotnet nuget add source --username cmpnnt --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/cmpnnt/index.json"
@@ -115,8 +127,6 @@ jobs:
       - name: Push DI Package to Nuget
         id: push-di-package
         run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ needs.get_changelog_versions.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
-  
-# TODO: Test whether the meta package actually uses the correct native version of CTL on different OSes.
   
 # TODO: remove github nuget sources and replace with nuget.org
 # TODO: Changelog should trigger both documentation and publish workflows
