@@ -78,7 +78,7 @@ jobs:
           path: Cmpnnt.Pia.Ctl/bin/Release/net8.0/${{matrix.rid_os}}-${{matrix.rid_arch}}/publish
   publish_meta_package:
     runs-on: ubuntu-latest
-    needs: [get_changelog_versions, get_published_packages_versions, publish_ctl_package]
+    needs: [get_changelog_versions, get_published_packages_versions, create_ctl_packages]
     steps:
       - uses: actions/checkout@v4
       - name: Download Windows Dll
@@ -116,12 +116,14 @@ jobs:
         id: push-di-package
         run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ needs.get_changelog_versions.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
   
-# TODO: add linux tests to test workflow
+# TODO: Test whether the meta package actually uses the correct native version of CTL on different OSes.
+  
 # TODO: remove github nuget sources and replace with nuget.org
 # TODO: Changelog should trigger both documentation and publish workflows
 # TODO: make public and publish documentation to github page
+
 # TODO: figure a better way to distribute the debug symbols. Might have to create a new .nupkg file just for the debug symbols
 # TODO: add macos runners and macos artifacts
 # TODO: determine a way to automatically update the relevant sub-changelogs when conventional commits are added to any given package.
 
-# TODO: Test whether the meta package actually uses the correct native version of CTL on different OSes.
+
