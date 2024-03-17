@@ -1,3 +1,4 @@
+using Cmpnnt.Pia.Ctl;
 using Cmpnnt.Pia.Ctl.Enums;
 using Cmpnnt.Pia.Ctl.Lib;
 using Cmpnnt.Pia.Ctl.Lib.Results;
@@ -8,34 +9,39 @@ namespace Cmpnnt.Pia.Test.Unit.Lib;
 public class CommandRunnerTests
 {
 
-    private static Task<PiaResults> MockExecute(string command, string piaPath, CancellationToken ct = default)
+    private static Task<PiaResults> MockExecute(string command, PiaCtlOptions options, CancellationToken ct = default)
     {
-        return Execute(command, piaPath);
+        return Execute(command, options);
     }
     
-    private static Task<PiaResults> MockTimedExecute(uint timeout, string command, string piaPath)
+    private static Task<PiaResults> MockTimedExecute(uint timeout, string command, PiaCtlOptions options)
     {
-        return Execute(command, piaPath);
+        return Execute(command, options);
     }
 
-    private static Task<PiaResults> Execute(string command, string piaPath)
+    private static Task<PiaResults> Execute(string command, PiaCtlOptions options)
     {
-        string mockValue = piaPath + " " + command;
+        string mockValue = options.PiaPath + " " + command;
         var result = new PiaResults
         {
-            StandardOutputResults = new List<string>{mockValue},
+            StandardOutputResults = [mockValue],
             Status = Status.Completed
         };
         return Task.FromResult(result);
     }
 
+    readonly CommandRunner _commandRunner = new();
+
+    private static readonly PiaCtlOptions Options = new() { PiaPath = PiaEnvironment.PiaPath };
+    
     [TestMethod]
     public async Task RunArgumentless()
     {
-        PiaResults results = await CommandRunner.Run(
+        PiaResults results = await _commandRunner.Run(
             MockExecute, 
             Command.Background, 
             DaemonAction.Protocol, 
+            Options,
             debug: true
         );
         
@@ -46,11 +52,12 @@ public class CommandRunnerTests
     [TestMethod]
     public async Task RunSingleStringArgument()
     {
-        PiaResults results = await CommandRunner.Run(
+        PiaResults results = await _commandRunner.Run(
             MockExecute, 
             Command.Background, 
             DaemonAction.Protocol, 
-            argument: "argument 1", 
+            argument: "argument 1",
+            Options,
             debug: true
         );
         
@@ -61,11 +68,12 @@ public class CommandRunnerTests
     [TestMethod]
     public async Task RunSingleBoolArgument()
     {
-        PiaResults results = await CommandRunner.Run(
+        PiaResults results = await _commandRunner.Run(
             MockExecute,
             Command.Background,
             DaemonAction.Protocol,
             argument: true,
+            Options,
             debug: true
         );
 
@@ -76,12 +84,13 @@ public class CommandRunnerTests
     [TestMethod]
     public async Task RunTwoArguments()
     {
-        PiaResults results = await CommandRunner.Run(
+        PiaResults results = await _commandRunner.Run(
             MockExecute,
             Command.Background,
             DaemonAction.Protocol,
             argument1: "argument 1",
             argument2: "argument 2",
+            Options,
             debug: true
         );
         
@@ -92,11 +101,12 @@ public class CommandRunnerTests
     [TestMethod]
     public async Task RunTimed()
     {
-        PiaResults results = await CommandRunner.Run(
+        PiaResults results = await _commandRunner.Run(
             MockTimedExecute,
             Command.Background,
             DaemonAction.Protocol,
             10,
+            Options,
             debug: true
         );
         

@@ -60,7 +60,7 @@ jobs:
   create_ctl_packages:
     runs-on: ${{ matrix.os }}
     strategy:
-      matrix: # TODO: Add MacOS
+      matrix:
         os: [ubuntu-latest, windows-latest, macos-13, macos-14]
         include:
           - { os: ubuntu-latest, rid_os: linux, rid_arch: x64 }
@@ -133,7 +133,6 @@ jobs:
 # TODO: make public and publish documentation to github page
 
 # TODO: figure a better way to distribute the debug symbols. Might have to create a new .nupkg file just for the debug symbols
-# TODO: add macos runners and macos artifacts
 # TODO: determine a way to automatically update the relevant sub-changelogs when conventional commits are added to any given package.
 
 

@@ -14,6 +14,7 @@ public class Helpers
         }
         if(OperatingSystem() == Os.MacOs)
         {
+            // TODO: Get the MacOS piactl command line executable location
             throw new ArgumentException("MacOS is currently unsupported because of limitations in .NET 7.");
         }
 

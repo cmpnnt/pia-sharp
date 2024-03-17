@@ -12,7 +12,33 @@ public class PiaCtl
 {
 
     private readonly PiaCtlOptions _piaCtlOptions;
+    private readonly ICommandLineWrapper _commandLineWrapper;
+    private readonly CommandRunner _commandRunner;
 
+    /// <summary>
+    /// Allows options and a a <see cref="CommandLineWrapper"/> implementation to be set during construction.</summary>
+    /// <param name="piaCtlOptions">The options to configure </param>
+    /// <param name="commandLineWrapper">A wrapper around the system's command line interface. The methods defined
+    /// in this interface match <see cref="ExecuteDelegate">ExecuteDelegate</see> and <see cref="ExecuteTimedDelegate">ExecuteTimedDelegate</see></param>
+    public PiaCtl(PiaCtlOptions piaCtlOptions, ICommandLineWrapper commandLineWrapper)
+    {
+        _piaCtlOptions = piaCtlOptions;
+        _commandLineWrapper = commandLineWrapper;
+        _commandRunner = new CommandRunner();
+    }
+    
+    /// <summary>
+    /// Allows a <see cref="CommandLineWrapper"/> implementation to be set during construction.
+    /// </summary>
+    /// <param name="commandLineWrapper" />A wrapper around the system's command line interface. The methods defined
+    /// in this interface match <see cref="ExecuteDelegate" /> and <see cref="ExecuteTimedDelegate" />/param>
+    public PiaCtl(ICommandLineWrapper commandLineWrapper)
+    {
+        _piaCtlOptions = new PiaCtlOptions();
+        _commandLineWrapper = commandLineWrapper;
+        _commandRunner = new CommandRunner();
+    }
+    
     /// <summary>
     /// Allows options to be set during construction.
     /// </summary>
@@ -20,6 +46,8 @@ public class PiaCtl
     public PiaCtl(PiaCtlOptions piaCtlOptions)
     {
         _piaCtlOptions = piaCtlOptions;
+        _commandLineWrapper = new CommandLineWrapper();
+        _commandRunner = new CommandRunner();
     }
     
     /// <summary>
@@ -28,6 +56,8 @@ public class PiaCtl
     public PiaCtl()
     {
         _piaCtlOptions = new PiaCtlOptions();
+        _commandLineWrapper = new CommandLineWrapper();
+        _commandRunner = new CommandRunner();
     }
 
     //Connection
@@ -41,11 +71,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> Connect(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Connect, 
                 DaemonAction.None, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -58,12 +88,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> Login(string loginFilePath, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Login,
                 DaemonAction.None,
                 loginFilePath,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -75,11 +105,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> Disconnect(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Disconnect, 
                 DaemonAction.None, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -91,11 +121,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> Logout(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Logout, 
                 DaemonAction.None, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -108,11 +138,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> ResetSettings(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.ResetSettings, 
                 DaemonAction.None, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -126,13 +156,13 @@ public class PiaCtl
     //Dedicated IP
     public async Task<PiaResults> AddDedicatedIp(string tokenFilePath, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.DedicatedIp,
                 DaemonAction.None,
                 "add",
                 tokenFilePath,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -146,13 +176,13 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> RemoveDedicatedIp(string regionId, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.DedicatedIp,
                 DaemonAction.None,
                 "remove",
                 regionId,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -169,12 +199,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> BackgroundEnable(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Background,
                 DaemonAction.None,
                 "enable",
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -186,12 +216,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> BackgroundDisable(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Background,
                 DaemonAction.None,
                 "disable",
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -206,12 +236,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> SetAllowLan(bool value, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Set,
                 DaemonAction.AllowLan,
                 value,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -224,12 +254,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> SetDebugLogging(bool value, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Set,
                 DaemonAction.DebugLogging,
                 value,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -242,12 +272,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> SetProtocol(string value, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Set,
                 DaemonAction.Protocol,
                 value,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -260,12 +290,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> SetRegion(string value, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Set, 
                 DaemonAction.Region, 
                 value, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -278,12 +308,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> SetRequestPortForward(bool value, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Set,
                 DaemonAction.RequestPortForward,
                 value,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -297,11 +327,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> GetAllowLan(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Get, 
                 DaemonAction.AllowLan, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -313,11 +343,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> GetConnectionState(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Get, 
                 DaemonAction.ConnectionState,
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -329,11 +359,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> GetDebugLogging(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Get, 
                 DaemonAction.DebugLogging, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -345,11 +375,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> GetPortForward(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Get, 
                 DaemonAction.PortForward, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -361,11 +391,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> GetProtocol(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Get, 
                 DaemonAction.Protocol, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -377,11 +407,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> GetPubIp(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Get, 
                 DaemonAction.PubIp, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -393,11 +423,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> GetRegion(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Get, 
                 DaemonAction.Region, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -409,11 +439,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> GetRegions(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Get, 
                 DaemonAction.Regions, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -425,11 +455,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> GetRequestPortForward(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute, 
                 Command.Get, 
                 DaemonAction.RequestPortForward, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -441,11 +471,11 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> GetVpnIp(bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.Execute,
+        return await _commandRunner.Run(
+                _commandLineWrapper.Execute,
                 Command.Get, 
                 DaemonAction.VpnIp, 
-                _piaCtlOptions.PiaPath, 
+                _piaCtlOptions, 
                 debug)
             .ConfigureAwait(false);
     }
@@ -460,12 +490,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> MonitorAllowLan(uint timeout, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.ExecuteTimed, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.ExecuteTimed, 
                 Command.Monitor,
                 DaemonAction.AllowLan,
                 timeout,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -478,12 +508,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> MonitorConnectionState(uint timeout, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.ExecuteTimed, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.ExecuteTimed, 
                 Command.Monitor,
                 DaemonAction.ConnectionState,
                 timeout,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -496,12 +526,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> MonitorDebugLogging(uint timeout, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.ExecuteTimed, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.ExecuteTimed, 
                 Command.Monitor,
                 DaemonAction.DebugLogging,
                 timeout,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -514,12 +544,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> MonitorPortForward(uint timeout, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.ExecuteTimed, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.ExecuteTimed, 
                 Command.Monitor,
                 DaemonAction.PortForward,
                 timeout,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -532,12 +562,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> MonitorProtocol(uint timeout, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.ExecuteTimed, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.ExecuteTimed, 
                 Command.Monitor,
                 DaemonAction.Protocol,
                 timeout,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -550,12 +580,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> MonitorPubIp(uint timeout, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.ExecuteTimed, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.ExecuteTimed, 
                 Command.Monitor,
                 DaemonAction.PubIp,
                 timeout,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -568,12 +598,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> MonitorRegion(uint timeout, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.ExecuteTimed, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.ExecuteTimed, 
                 Command.Monitor,
                 DaemonAction.Region,
                 timeout,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -586,12 +616,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> MonitorRequestPortForward(uint timeout, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.ExecuteTimed,
+        return await _commandRunner.Run(
+                _commandLineWrapper.ExecuteTimed,
                 Command.Monitor,
                 DaemonAction.RequestPortForward,
                 timeout,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }
@@ -604,12 +634,12 @@ public class PiaCtl
     /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> MonitorVpnIp(uint timeout, bool debug = false)
     {
-        return await CommandRunner.Run(
-                CommandLineWrapper.ExecuteTimed, 
+        return await _commandRunner.Run(
+                _commandLineWrapper.ExecuteTimed, 
                 Command.Monitor,
                 DaemonAction.VpnIp,
                 timeout,
-                _piaCtlOptions.PiaPath,
+                _piaCtlOptions,
                 debug)
             .ConfigureAwait(false);
     }

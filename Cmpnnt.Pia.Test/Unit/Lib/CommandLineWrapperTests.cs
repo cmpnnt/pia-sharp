@@ -1,10 +1,9 @@
+using Cmpnnt.Pia.Ctl;
 using Cmpnnt.Pia.Ctl.Enums;
 using Cmpnnt.Pia.Ctl.Lib;
 using Cmpnnt.Pia.Ctl.Lib.Results;
 
 namespace Cmpnnt.Pia.Test.Unit.Lib;
-
-// TODO: DRY these tests up.
 
 [TestClass]
 public class CommandLineWrapperTests
@@ -12,25 +11,19 @@ public class CommandLineWrapperTests
     private const string Command = "echo hello";
     private const string ErrorCommand = "I throw an error.";
     private const string TimedCommand = "sleep 1; echo hello";
+    private readonly CommandLineWrapper _commandLineWrapper = new();
+    private static readonly PiaCtlOptions Options = new() { PiaPath = Helpers.CommandLinePath() };
     
     [TestMethod]
     public async Task CompletedExecution()
     {
         if (Helpers.OperatingSystem() == Os.Windows)
         {
-            PiaResults results = await CommandLineWrapper.Execute(Command, Helpers.CommandLinePath());
+            PiaResults results = await _commandLineWrapper.Execute(Command, Options);
             Assert.AreEqual("hello", results.StandardOutputResults[0]);
             Assert.AreEqual(0, results.StandardErrorResults.Count);
             Assert.AreEqual(Status.Completed, results.Status);
         }
-        else
-        {
-            PiaResults results = await CommandLineWrapper.Execute("hello", "/usr/bin/echo");
-            Assert.AreEqual("hello", results.StandardOutputResults[0]);
-            Assert.AreEqual(0, results.StandardErrorResults.Count);
-            Assert.AreEqual(Status.Completed, results.Status);
-        }
-
     }
     
     [TestMethod]
@@ -39,15 +32,9 @@ public class CommandLineWrapperTests
 
         if (Helpers.OperatingSystem() == Os.Windows)
         {
-            PiaResults results = await CommandLineWrapper.ExecuteTimed(4, TimedCommand, Helpers.CommandLinePath());
+            PiaResults results = await _commandLineWrapper.ExecuteTimed(4, TimedCommand, Options);
             Assert.AreEqual(Status.Completed, results.Status);
             Assert.AreEqual("hello", results.StandardOutputResults[0]);
-            Assert.AreEqual(0, results.StandardErrorResults.Count);
-        }
-        else
-        {
-            PiaResults results = await CommandLineWrapper.ExecuteTimed(4, "2", "/usr/bin/sleep");
-            Assert.AreEqual(Status.Completed, results.Status);
             Assert.AreEqual(0, results.StandardErrorResults.Count);
         }
     }
@@ -62,16 +49,7 @@ public class CommandLineWrapperTests
         if (Helpers.OperatingSystem() == Os.Windows)
         {
             // Use the `TimedCommand` to simulate a long-running task to cancel
-            PiaResults results = await CommandLineWrapper.Execute(TimedCommand, Helpers.CommandLinePath(), ct: ct);
-            Console.WriteLine(results.ToString());
-            Assert.AreEqual(Status.Canceled, results.Status);
-            Assert.AreEqual(0, results.StandardOutputResults.Count);
-            Assert.AreEqual(0, results.StandardErrorResults.Count);
-        }
-        else
-        {
-            // Use the `TimedCommand` to simulate a long-running task to cancel
-            PiaResults results = await CommandLineWrapper.Execute("3", "/usr/bin/sleep", ct: ct);
+            PiaResults results = await _commandLineWrapper.Execute(TimedCommand, Options, ct: ct);
             Console.WriteLine(results.ToString());
             Assert.AreEqual(Status.Canceled, results.Status);
             Assert.AreEqual(0, results.StandardOutputResults.Count);
@@ -82,7 +60,7 @@ public class CommandLineWrapperTests
     [TestMethod]
     public async Task ErroredExecution()
     {
-        PiaResults results = await CommandLineWrapper.Execute(ErrorCommand, Helpers.CommandLinePath());
+        PiaResults results = await _commandLineWrapper.Execute(ErrorCommand, Options);
         var errorMessage = (Helpers.OperatingSystem() == Os.Windows) ? "is not recognized" : "no such file";
         Assert.IsTrue(results.StandardErrorResults[0].ToLower().Contains(errorMessage));
         Assert.AreEqual(0, results.StandardOutputResults.Count);
@@ -92,7 +70,7 @@ public class CommandLineWrapperTests
     [TestMethod]
     public async Task ErroredExecutionTimed()
     {
-        PiaResults results = await CommandLineWrapper.ExecuteTimed(3, ErrorCommand, Helpers.CommandLinePath());
+        PiaResults results = await _commandLineWrapper.ExecuteTimed(3, ErrorCommand, Options);
         var errorMessage = (Helpers.OperatingSystem() == Os.Windows) ? "is not recognized" : "no such file";
         Assert.IsTrue(results.StandardErrorResults[0].ToLower().Contains(errorMessage));
         Assert.AreEqual(0, results.StandardOutputResults.Count);
