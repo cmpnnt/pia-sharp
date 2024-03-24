@@ -4,7 +4,6 @@ using Cmpnnt.Pia.Ctl.Lib.Results;
 
 namespace Cmpnnt.Pia.Ctl.Lib;
 
-
 /// <summary>
 /// Wraps the system console, invokes the piactl executable and captures the output.
 /// </summary>
