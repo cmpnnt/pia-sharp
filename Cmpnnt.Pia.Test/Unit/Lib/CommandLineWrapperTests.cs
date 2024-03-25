@@ -10,7 +10,7 @@ public class CommandLineWrapperTests
 {
     private const string Command = "echo hello";
     private const string ErrorCommand = "I throw an error.";
-    private const string TimedCommand = "sleep 1; echo hello";
+    private const string TimedCommand = "sleep 4; echo hello";
     private readonly CommandLineWrapper _commandLineWrapper = new();
     private static readonly PiaCtlOptions Options = new() { PiaPath = Helpers.CommandLinePath() };
     
@@ -32,7 +32,7 @@ public class CommandLineWrapperTests
 
         if (Helpers.OperatingSystem() == Os.Windows)
         {
-            PiaResults results = await _commandLineWrapper.ExecuteTimed(4, TimedCommand, Options);
+            PiaResults results = await _commandLineWrapper.ExecuteTimed(5, TimedCommand, Options);
             Assert.AreEqual(Status.Completed, results.Status);
             Assert.AreEqual("hello", results.StandardOutputResults[0]);
             Assert.AreEqual(0, results.StandardErrorResults.Count);

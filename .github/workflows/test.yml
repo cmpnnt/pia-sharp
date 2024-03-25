@@ -1,18 +1,77 @@
 ﻿name: "Test"
+#on:
+#  pull_request:
+#    types: [labeled, closed]
 on:
-  pull_request:
-    types: [labeled]
+  workflow_dispatch
 jobs:
   run_all:
     name: "Run All Tests"
-    if: ${{ github.event.label.name == 'test' }}
+    #if: ${{ github.event.label.name == 'test' ||  github.event.pull_request.merged == true }}
     runs-on: ${{ matrix.os }}
     strategy:
-      matrix: # TODO: Add MacOS
-        os: [ubuntu-latest, windows-latest]
+      matrix:
+        #os: [ubuntu-latest, windows-latest, macos-13, macos-14]
+        os: [windows-latest]
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - name: Add Github Nuget Source # TODO: Remove this. It's only needed until I push the package to Nuget
+        id: add-github-nuget-source
+        run: dotnet nuget add source --username cmpnnt --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/cmpnnt/index.json"
       - name: Dotnet Test
-        run: dotnet test Cmpnnt.Pia.Test
+        run: dotnet test --collect:"XPlat Code Coverage;Format=cobertura"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage.cobertura.xml
+          path: Cmpnnt.Pia.Test/TestResults/*/coverage.cobertura.xml
+  update_badges:
+    name: "Update Badges"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    needs: [run_all]
+    outputs:
+      line-coverage: ${{ steps.get-line-coverage.outputs.value }}
+      branch-coverage: ${{ steps.get-branch-coverage.outputs.value }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Code Coverage Report
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage.cobertura.xml
+          path: Cmpnnt.Pia.Test
+      - run: sudo apt install -y ripgrep
+      - name: "Get Line Coverage"
+        id: get-line-coverage
+        run: echo "value=$(rg '<coverage line-rate="([0-9\.]+)" branch-rate="([0-9\.]+)"' -or '$1' Cmpnnt.Pia.Test/*/coverage.cobertura.xml)" >> $GITHUB_OUTPUT
+      - name: "Get Branch Coverage"
+        id: get-branch-coverage
+        run: echo "value=$(rg '<coverage line-rate="([0-9\.]+)" branch-rate="([0-9\.]+)"' -or '$2' Cmpnnt.Pia.Test/*/coverage.cobertura.xml)" >> $GITHUB_OUTPUT
+      # TODO: use `bc` to multiply the values by 100. See if it can be worked into the lines above.
+      - name: 'Scale Line Coverage'
+        id: 'scale-line-coverage'
+        run:  echo "value=$(echo "scale=2;(${{ steps.get-line-coverage.outputs.value }}*100)/1" | bc)" >> $GITHUB_OUTPUT
+      - name: 'Scale Branch Coverage'
+        id: 'scale-branch-coverage'
+        run:  echo "value=$(echo "scale=2;(${{ steps.get-branch-coverage.outputs.value }}*100)/1" | bc)" >> $GITHUB_OUTPUT
+      - name: Update Coverage Badges
+        env:
+          line_coverage_regex: '(!\[Static Badge\].*line%20coverage-)([0-9\.]*)(%25-.*)'
+          branch_coverage_regex: '(!\[Static Badge\].*branch%20coverage-)([0-9\.]*)(%25-.*)'
+        run: |
+          sed -i -E "s/$line_coverage_regex/\1${{ steps.scale-line-coverage.outputs.value }}\3/" README.md && \
+          sed -i -E "s/$branch_coverage_regex/\1${{ steps.scale-branch-coverage.outputs.value }}\3/" README.md
+      - name: "Extract Branch Name"
+        id: extract-branch
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+      - name: Commit README.md
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: ${{ steps.extract_branch.outputs.branch }}
+          commit_message: 'docs: update coverage badges for ${{ github.ref_name }} [skip ci]'
+          file_pattern: README.md
     
+    # TODO: Add logic to update the badge color depending on coverage percentage.
+    # Red #d13111 for 0-50, yellow #ded11b for 51-80, green #37ad13 for 80-100.
+    # This regex will match the hex value: `-[0-9.]*%25-([a-z0-9]{6})`
