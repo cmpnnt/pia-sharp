@@ -1,18 +1,17 @@
-# PIA Sharp README
+# PIA Sharp
+
+![NuGet Version](https://img.shields.io/nuget/v/System.Configuration.ConfigurationManager?style=flat-square)
+![Static Badge](https://img.shields.io/badge/line%20coverage-11%25-ded11b?style=flat-square)
+![Static Badge](https://img.shields.io/badge/branch%20coverage-11%25-ded11b?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/dwyl/repo-badges?style=flat-square)
+![Static Badge](https://img.shields.io/badge/License-MIT-37ad13?style=flat-square)
 
 `Cmpnnt.Pia.Ctl` is a .NET Native AOT wrapper around the `piactl` command line tool for the
-[Private Internet Access](https://privateinternetaccess.com) VPN. It's available on [Nuget](https://nuget.org/profiles/cmpnnt)
-(currently version 0.1.0).
-
-> MacOS is currently unsupported because there are no free MacOS GitHub action runners available that support .NET 8.
-> There are older (Intel) MacOS runners available for free, but they only support up to .NET 7. 
-> This repository will be updated to build MacOS packages if and when this changes.
+[Private Internet Access](https://privateinternetaccess.com) VPN. It's available on [Nuget](https://nuget.org/profiles/cmpnnt).
 
 ## Installation
 
-The Nuget packages comes in "plain" and dependency-injected versions. The plain version is a meta-package that conditionally
-references the appropriate version for your OS and architecture. I recommend using this package instead of directly referencing
-the system-specific packages. To include it in your project, run:
+The Nuget packages comes in "plain" and dependency-injected versions. The plain version is a meta-package contains binaries for Windows x64, Linux x64, MacOS x64, and MacOS arm64.
 
 `dotnet add package cmpnnt.pia.ctl`
 
