@@ -1,18 +1,15 @@
 ﻿name: "Test"
-#on:
-#  pull_request:
-#    types: [labeled, closed]
 on:
-  workflow_dispatch
+  pull_request:
+    types: [labeled, closed]
 jobs:
   run_all:
     name: "Run All Tests"
-    #if: ${{ github.event.label.name == 'test' ||  github.event.pull_request.merged == true }}
+    if: ${{ github.event.label.name == 'test' ||  github.event.pull_request.merged == true }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        #os: [ubuntu-latest, windows-latest, macos-13, macos-14]
-        os: [windows-latest, ubuntu-latest]
+        os: [ubuntu-latest, windows-latest, macos-13, macos-14]
     steps:
       - uses: actions/checkout@v4
       - name: Add Github Nuget Source # TODO: Remove this. It's only needed until I push the package to Nuget
