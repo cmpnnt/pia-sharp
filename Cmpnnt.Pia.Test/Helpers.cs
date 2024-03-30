@@ -23,9 +23,9 @@ public class Helpers
 
     public static Os OperatingSystem()
     {
-        string description = System.Runtime.InteropServices.RuntimeInformation.OSDescription;
+        string description = System.Runtime.InteropServices.RuntimeInformation.RuntimeIdentifier;
 
-        if(description.ToLower().Contains("windows"))
+        if(description.ToLower().Contains("win"))
         {
             return Os.Windows;
         }
@@ -33,7 +33,7 @@ public class Helpers
         {
             return Os.Linux;
         }
-        if(description.ToLower().Contains("mac"))
+        if(description.ToLower().Contains("osx"))
         {
             return Os.MacOs;
         }

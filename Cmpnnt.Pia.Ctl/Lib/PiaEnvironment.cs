@@ -15,9 +15,9 @@ public static class PiaEnvironment
     {
         get{
             
-            string description = System.Runtime.InteropServices.RuntimeInformation.OSDescription;
+            string description = System.Runtime.InteropServices.RuntimeInformation.RuntimeIdentifier;
 
-            if(description.ToLower().Contains("windows"))
+            if(description.ToLower().Contains("win"))
             {
                 return @"C:\Program Files\Private Internet Access\piactl.exe";
             }
@@ -25,11 +25,12 @@ public static class PiaEnvironment
             {
                 return @"/usr/local/bin/piactl";
             }
-            if(description.ToLower().Contains("mac"))
+            if(description.ToLower().Contains("osx"))
             {
                 throw new ArgumentException("MacOS is currently unsupported.");
             }
 
+            Console.WriteLine($"The operating system is {description}.");
             throw new ArgumentException("Unknown operating system");
         }
     }

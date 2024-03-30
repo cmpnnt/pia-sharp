@@ -10,7 +10,8 @@ public class CommandLineWrapperTests
 {
     private const string Command = "echo hello";
     private const string ErrorCommand = "I throw an error.";
-    private const string TimedCommand = "sleep 4; echo hello";
+    private const string ShortTimedCommand = "sleep 1; echo hello";
+    private const string LongTimedCommand = "sleep 3; echo hello";
     private readonly CommandLineWrapper _commandLineWrapper = new();
     private static readonly PiaCtlOptions Options = new() { PiaPath = Helpers.CommandLinePath() };
     
@@ -32,7 +33,7 @@ public class CommandLineWrapperTests
 
         if (Helpers.OperatingSystem() == Os.Windows)
         {
-            PiaResults results = await _commandLineWrapper.ExecuteTimed(5, TimedCommand, Options);
+            PiaResults results = await _commandLineWrapper.ExecuteTimed(5, ShortTimedCommand, Options);
             Assert.AreEqual(Status.Completed, results.Status);
             Assert.AreEqual("hello", results.StandardOutputResults[0]);
             Assert.AreEqual(0, results.StandardErrorResults.Count);
@@ -49,7 +50,7 @@ public class CommandLineWrapperTests
         if (Helpers.OperatingSystem() == Os.Windows)
         {
             // Use the `TimedCommand` to simulate a long-running task to cancel
-            PiaResults results = await _commandLineWrapper.Execute(TimedCommand, Options, ct: ct);
+            PiaResults results = await _commandLineWrapper.Execute(LongTimedCommand, Options, ct: ct);
             Console.WriteLine(results.ToString());
             Assert.AreEqual(Status.Canceled, results.Status);
             Assert.AreEqual(0, results.StandardOutputResults.Count);
@@ -70,7 +71,7 @@ public class CommandLineWrapperTests
     [TestMethod]
     public async Task ErroredExecutionTimed()
     {
-        PiaResults results = await _commandLineWrapper.ExecuteTimed(3, ErrorCommand, Options);
+        PiaResults results = await _commandLineWrapper.ExecuteTimed(1, ErrorCommand, Options);
         var errorMessage = (Helpers.OperatingSystem() == Os.Windows) ? "is not recognized" : "no such file";
         Assert.IsTrue(results.StandardErrorResults[0].ToLower().Contains(errorMessage));
         Assert.AreEqual(0, results.StandardOutputResults.Count);
