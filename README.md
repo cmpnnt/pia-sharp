@@ -1,8 +1,8 @@
 # PIA Sharp
 
 ![NuGet Version](https://img.shields.io/nuget/v/System.Configuration.ConfigurationManager?style=flat-square)
-![Static Badge](https://img.shields.io/badge/line%20coverage-11%25-ded11b?style=flat-square)
-![Static Badge](https://img.shields.io/badge/branch%20coverage-11%25-ded11b?style=flat-square)
+![Static Badge](https://img.shields.io/badge/line%20coverage-90.40%25-ded11b?style=flat-square)
+![Static Badge](https://img.shields.io/badge/branch%20coverage-74.10%25-ded11b?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dwyl/repo-badges?style=flat-square)
 ![Static Badge](https://img.shields.io/badge/License-MIT-37ad13?style=flat-square)
 
