@@ -24,6 +24,7 @@ jobs:
         with:
           name: coverage.cobertura.xml
           path: Cmpnnt.Pia.Test/TestResults/*/coverage.cobertura.xml
+          overwrite: true
   update_badges:
     name: "Update Badges"
     runs-on: ubuntu-latest
