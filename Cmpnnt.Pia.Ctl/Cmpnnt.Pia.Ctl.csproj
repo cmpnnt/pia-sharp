@@ -31,6 +31,7 @@
     
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="/"/>
+        <None Include="LICENSE.txt" Pack="true" PackagePath="/"/>
         <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/linux-x64/native/" Pack="true" PackagePath="/runtimes/linux-x64/native" />
         <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/win-x64/native/" Pack="true" PackagePath="/runtimes/win-x64/native" />
         <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/osx-x64/native/" Pack="true" PackagePath="/runtimes/osx-x64/native" />
