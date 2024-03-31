@@ -1,4 +1,6 @@
-﻿namespace Cmpnnt.Pia.Ctl.Lib;
+﻿using System.Runtime.InteropServices;
+
+namespace Cmpnnt.Pia.Ctl.Lib;
 
 /// <summary>
 /// Utilities related to the execution environment of the piactl binary.
@@ -14,23 +16,16 @@ public static class PiaEnvironment
     public static string PiaPath
     {
         get{
-            
-            string description = System.Runtime.InteropServices.RuntimeInformation.RuntimeIdentifier;
 
-            if(description.ToLower().Contains("win"))
+            if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 return @"C:\Program Files\Private Internet Access\piactl.exe";
             }
-            if(description.ToLower().Contains("linux"))
+            if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
                 return @"/usr/local/bin/piactl";
             }
-            if(description.ToLower().Contains("osx"))
-            {
-                throw new ArgumentException("MacOS is currently unsupported.");
-            }
 
-            Console.WriteLine($"The operating system is {description}.");
             throw new ArgumentException("Unknown operating system");
         }
     }

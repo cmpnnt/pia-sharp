@@ -1,4 +1,6 @@
-﻿namespace Cmpnnt.Pia.Test;
+﻿using System.Runtime.InteropServices;
+
+namespace Cmpnnt.Pia.Test;
 
 public class Helpers
 {
@@ -23,17 +25,17 @@ public class Helpers
 
     public static Os OperatingSystem()
     {
-        string description = System.Runtime.InteropServices.RuntimeInformation.RuntimeIdentifier;
+        string description = RuntimeInformation.RuntimeIdentifier;
 
-        if(description.ToLower().Contains("win"))
+        if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
             return Os.Windows;
         }
-        if(description.ToLower().Contains("linux"))
+        if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
         {
             return Os.Linux;
         }
-        if(description.ToLower().Contains("osx"))
+        if(RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
             return Os.MacOs;
         }
