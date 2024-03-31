@@ -22,5 +22,4 @@ meta-package of the plain version, so you do not need to install it explicitly.
 
 ## Developer Documentation
 
-> TODO: Add link to developer documentation
-See the [API reference]((http://todo)) for more detailed documentation.
+See the [API reference]((https://cmpnnt.github.io/pia-sharp/)) for more detailed documentation.
