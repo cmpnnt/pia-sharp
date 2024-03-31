@@ -1,9 +1,9 @@
 # PIA Sharp
 
-![NuGet Version](https://img.shields.io/nuget/v/System.Configuration.ConfigurationManager?style=flat-square)
+![NuGet Version](https://img.shields.io/nuget/v/Cmpnnt.Pia.Ctl?style=flat-square)
 ![Static Badge](https://img.shields.io/badge/line%20coverage-90.40%25-ded11b?style=flat-square)
 ![Static Badge](https://img.shields.io/badge/branch%20coverage-74.10%25-ded11b?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/dwyl/repo-badges?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/cmpnnt/pia-sharp?style=flat-square)
 ![Static Badge](https://img.shields.io/badge/License-MIT-37ad13?style=flat-square)
 
 `Cmpnnt.Pia.Ctl` is a .NET Native AOT wrapper around the `piactl` command line tool for the
@@ -22,4 +22,4 @@ meta-package of the plain version, so you do not need to install it explicitly.
 
 ## Developer Documentation
 
-See the [API reference]((https://cmpnnt.github.io/pia-sharp/)) for more detailed documentation.
+See the [API reference](https://cmpnnt.github.io/pia-sharp/) for more detailed documentation.
