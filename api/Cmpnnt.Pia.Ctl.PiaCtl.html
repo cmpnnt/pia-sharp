@@ -1,0 +1,1659 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PiaCtl | PIA Sharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PiaCtl | PIA Sharp ">
+      
+      <meta name="description" content="A convenience class to call the commands available in the piactl command line application. The methods are all asynchronous despite not using the async suffix.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/cmpnnt/pia-sharp/new/main/apiSpec/new?filename=Cmpnnt_Pia_Ctl_PiaCtl.md&amp;value=---%0Auid%3A%20Cmpnnt.Pia.Ctl.PiaCtl%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Cmpnnt.Pia.Ctl.PiaCtl">
+
+
+
+  <h1 id="Cmpnnt_Pia_Ctl_PiaCtl" data-uid="Cmpnnt.Pia.Ctl.PiaCtl" class="text-break">
+Class PiaCtl  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Cmpnnt.html">Cmpnnt</a>.<a class="xref" href="Cmpnnt.Pia.html">Pia</a>.<a class="xref" href="Cmpnnt.Pia.Ctl.html">Ctl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Cmpnnt.Pia.Ctl.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A convenience class to call the commands available in the piactl command line application.
+The methods are all asynchronous despite not using the <code>async</code> suffix.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PiaCtl</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PiaCtl</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl__ctor_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.#ctor*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl__ctor" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.#ctor">
+  PiaCtl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The default constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PiaCtl()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl__ctor_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.#ctor*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl__ctor_Cmpnnt_Pia_Ctl_Lib_ICommandLineWrapper_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.#ctor(Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper)">
+  PiaCtl(ICommandLineWrapper)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows a <a class="xref" href="Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.html">CommandLineWrapper</a> implementation to be set during construction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PiaCtl(ICommandLineWrapper commandLineWrapper)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>commandLineWrapper</code> <a class="xref" href="Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.html">ICommandLineWrapper</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl__ctor_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.#ctor*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl__ctor_Cmpnnt_Pia_Ctl_PiaCtlOptions_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.#ctor(Cmpnnt.Pia.Ctl.PiaCtlOptions)">
+  PiaCtl(PiaCtlOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows options to be set during construction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PiaCtl(PiaCtlOptions piaCtlOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>piaCtlOptions</code> <a class="xref" href="Cmpnnt.Pia.Ctl.PiaCtlOptions.html">PiaCtlOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl__ctor_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.#ctor*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl__ctor_Cmpnnt_Pia_Ctl_PiaCtlOptions_Cmpnnt_Pia_Ctl_Lib_ICommandLineWrapper_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.#ctor(Cmpnnt.Pia.Ctl.PiaCtlOptions,Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper)">
+  PiaCtl(PiaCtlOptions, ICommandLineWrapper)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows options and a a <a class="xref" href="Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.html">CommandLineWrapper</a> implementation to be set during construction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PiaCtl(PiaCtlOptions piaCtlOptions, ICommandLineWrapper commandLineWrapper)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>piaCtlOptions</code> <a class="xref" href="Cmpnnt.Pia.Ctl.PiaCtlOptions.html">PiaCtlOptions</a></dt>
+    <dd><p>The options to configure</p>
+</dd>
+    <dt><code>commandLineWrapper</code> <a class="xref" href="Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.html">ICommandLineWrapper</a></dt>
+    <dd><p>A wrapper around the system's command line interface. The methods defined
+in this interface match <a class="xref" href="Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate.html">ExecuteDelegate</a> and <a class="xref" href="Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate.html">ExecuteTimedDelegate</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_AddDedicatedIp_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.AddDedicatedIp*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_AddDedicatedIp_System_String_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.AddDedicatedIp(System.String,System.Boolean)">
+  AddDedicatedIp(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a dedicated IP address to your VPN. The dedicated IP token must be in a text file by itself. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; AddDedicatedIp(string tokenFilePath, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tokenFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the text file containing your dedicated IP token.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_BackgroundDisable_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.BackgroundDisable*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_BackgroundDisable_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.BackgroundDisable(System.Boolean)">
+  BackgroundDisable(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Foregrounds a backgrounded PIA daemon. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; BackgroundDisable(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_BackgroundEnable_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.BackgroundEnable*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_BackgroundEnable_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.BackgroundEnable(System.Boolean)">
+  BackgroundEnable(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allow the killswitch and/or VPN connection to remain active in the background when the GUI client is not running.
+When enabled, the PIA daemon will stay active even if the GUI client is closed or has not been started. This
+allows <code>Connection.Connect()</code> to be used even if the GUI client is not running. Disabling background activation
+will disconnect the VPN and deactivate killswitch if the GUI client is not running. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; BackgroundEnable(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_Connect_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.Connect*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_Connect_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.Connect(System.Boolean)">
+  Connect(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Connects to the VPN, or reconnects to apply new settings. To use this command, the PIA GUI client must
+be running, or background mode must be enabled with <code>piactl background enable</code>. By default, the PIA daemon
+is inactive when the GUI client is not running. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; Connect(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_Disconnect_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.Disconnect*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_Disconnect_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.Disconnect(System.Boolean)">
+  Disconnect(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disconnects from the VPN. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; Disconnect(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_GetAllowLan_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetAllowLan*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_GetAllowLan_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetAllowLan(System.Boolean)">
+  GetAllowLan(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether allows LAN traffic. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; GetAllowLan(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_GetConnectionState_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetConnectionState*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_GetConnectionState_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetConnectionState(System.Boolean)">
+  GetConnectionState(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current VPN connection state. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; GetConnectionState(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_GetDebugLogging_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetDebugLogging*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_GetDebugLogging_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetDebugLogging(System.Boolean)">
+  GetDebugLogging(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current state of the debug logging setting. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; GetDebugLogging(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_GetPortForward_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetPortForward*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_GetPortForward_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetPortForward(System.Boolean)">
+  GetPortForward(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the forward port number, if available, or the status of the request to forward a port. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; GetPortForward(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_GetProtocol_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetProtocol*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_GetProtocol_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetProtocol(System.Boolean)">
+  GetProtocol(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L392"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current VPN connection protocol. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; GetProtocol(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_GetPubIp_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetPubIp*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_GetPubIp_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetPubIp(System.Boolean)">
+  GetPubIp(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current public IP address. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; GetPubIp(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_GetRegion_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetRegion*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_GetRegion_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetRegion(System.Boolean)">
+  GetRegion(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the currently selected region (or &quot;auto&quot;). This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; GetRegion(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_GetRegions_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetRegions*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_GetRegions_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetRegions(System.Boolean)">
+  GetRegions(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L440"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists all available regions. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; GetRegions(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_GetRequestPortForward_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetRequestPortForward*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_GetRequestPortForward_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetRequestPortForward(System.Boolean)">
+  GetRequestPortForward(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L456"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether a forwarded port will be requested on the next connection attempt. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; GetRequestPortForward(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_GetVpnIp_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetVpnIp*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_GetVpnIp_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.GetVpnIp(System.Boolean)">
+  GetVpnIp(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current VPN IP address. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; GetVpnIp(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_Login_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.Login*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_Login_System_String_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.Login(System.String,System.Boolean)">
+  Login(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs into Private Internet Access using a login file. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; Login(string loginFilePath, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loginFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the text file containing your login information as specified by <code>piactl.exe --help</code>.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_Logout_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.Logout*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_Logout_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.Logout(System.Boolean)">
+  Logout(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Log out your PIA account on this computer. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; Logout(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorAllowLan_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorAllowLan*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorAllowLan_System_UInt32_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorAllowLan(System.UInt32,System.Boolean)">
+  MonitorAllowLan(uint, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L491"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Monitors whether LAN traffic is being allowed. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; MonitorAllowLan(uint timeout, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A (non-negative) integer number of seconds to run the monitor operation.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorConnectionState_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorConnectionState*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorConnectionState_System_UInt32_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorConnectionState(System.UInt32,System.Boolean)">
+  MonitorConnectionState(uint, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L509"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Monitors the VPN connection state. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; MonitorConnectionState(uint timeout, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A (non-negative) integer number of seconds to run the monitor operation.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorDebugLogging_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorDebugLogging*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorDebugLogging_System_UInt32_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorDebugLogging(System.UInt32,System.Boolean)">
+  MonitorDebugLogging(uint, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L527"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Monitors the state of the debug logging setting. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; MonitorDebugLogging(uint timeout, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A (non-negative) integer number of seconds to run the monitor operation.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorPortForward_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorPortForward*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorPortForward_System_UInt32_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorPortForward(System.UInt32,System.Boolean)">
+  MonitorPortForward(uint, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L545"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Monitors the forwarded port number, if available, or the status of the request to forward a port. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; MonitorPortForward(uint timeout, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A (non-negative) integer number of seconds to run the monitor operation.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorProtocol_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorProtocol*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorProtocol_System_UInt32_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorProtocol(System.UInt32,System.Boolean)">
+  MonitorProtocol(uint, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L563"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Monitors the VPN connection protocol. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; MonitorProtocol(uint timeout, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A (non-negative) integer number of seconds to run the monitor operation.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorPubIp_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorPubIp*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorPubIp_System_UInt32_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorPubIp(System.UInt32,System.Boolean)">
+  MonitorPubIp(uint, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L581"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Monitors the public IP address. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; MonitorPubIp(uint timeout, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A (non-negative) integer number of seconds to run the monitor operation.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorRegion_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorRegion*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorRegion_System_UInt32_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorRegion(System.UInt32,System.Boolean)">
+  MonitorRegion(uint, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L599"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Monitors the currently selected region. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; MonitorRegion(uint timeout, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A (non-negative) integer number of seconds to run the monitor operation.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorRequestPortForward_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorRequestPortForward*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorRequestPortForward_System_UInt32_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorRequestPortForward(System.UInt32,System.Boolean)">
+  MonitorRequestPortForward(uint, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L617"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Monitors whether a forwarded port will be requested on the next connection attempt. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; MonitorRequestPortForward(uint timeout, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A (non-negative) integer number of seconds to run the monitor operation.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorVpnIp_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorVpnIp*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_MonitorVpnIp_System_UInt32_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.MonitorVpnIp(System.UInt32,System.Boolean)">
+  MonitorVpnIp(uint, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L635"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Monitors the VPN IP address. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; MonitorVpnIp(uint timeout, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A (non-negative) integer number of seconds to run the monitor operation.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_RemoveDedicatedIp_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.RemoveDedicatedIp*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_RemoveDedicatedIp_System_String_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.RemoveDedicatedIp(System.String,System.Boolean)">
+  RemoveDedicatedIp(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a dedicated IP address from your VPN. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; RemoveDedicatedIp(string regionId, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>regionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The region associated with the dedicated IP as shown by the method <code>GetRegions()</code>
+or <code>piactl.exe get regions</code></p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_ResetSettings_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.ResetSettings*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_ResetSettings_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.ResetSettings(System.Boolean)">
+  ResetSettings(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets daemon settings to the defaults (ports/protocols/etc). This affects the PIA daemon itself,
+not this instance of the CLI wrapper. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; ResetSettings(bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_SetAllowLan_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.SetAllowLan*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_SetAllowLan_System_Boolean_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.SetAllowLan(System.Boolean,System.Boolean)">
+  SetAllowLan(bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets whether to allow LAN traffic. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; SetAllowLan(bool value, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether or not to allow LAN traffic.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_SetDebugLogging_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.SetDebugLogging*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_SetDebugLogging_System_Boolean_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.SetDebugLogging(System.Boolean,System.Boolean)">
+  SetDebugLogging(bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets whether to enable or disable debug logging. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; SetDebugLogging(bool value, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether or not to enable debug logging.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_SetProtocol_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.SetProtocol*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_SetProtocol_System_String_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.SetProtocol(System.String,System.Boolean)">
+  SetProtocol(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the VPN protocol. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; SetProtocol(string value, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The VPN protocol to use. Must be one of &quot;openvpn&quot; or &quot;wireguard&quot;.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_SetRegion_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.SetRegion*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_SetRegion_System_String_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.SetRegion(System.String,System.Boolean)">
+  SetRegion(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the VPN region. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; SetRegion(string value, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A valid region or &quot;auto&quot;. Run the method <code>GetRegions()</code> for a list of regions.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Cmpnnt_Pia_Ctl_PiaCtl_SetRequestPortForward_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.SetRequestPortForward*"></a>
+
+  <h3 id="Cmpnnt_Pia_Ctl_PiaCtl_SetRequestPortForward_System_Boolean_System_Boolean_" data-uid="Cmpnnt.Pia.Ctl.PiaCtl.SetRequestPortForward(System.Boolean,System.Boolean)">
+  SetRequestPortForward(bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets whether to request a forwarded port on the next connection attempt. This is an <code>async</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PiaResults&gt; SetRequestPortForward(bool value, bool debug = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether or not to request port forwarding.</p>
+</dd>
+    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Prints debug logs to stderr.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html">PiaResults</a>&gt;</dt>
+    <dd><p>A <code>Task&lt;PiaResults&gt;</code> containing standard output and standard error results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/cmpnnt/pia-sharp/blob/main/Cmpnnt.Pia.Ctl/PiaCtl.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

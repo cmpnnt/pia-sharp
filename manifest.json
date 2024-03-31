@@ -1,0 +1,378 @@
+{
+  "source_base_path": "/home/runner/work/pia-sharp/pia-sharp/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Enums.Command.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Enums.Command.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Enums.Status.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Enums.Status.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.CommandRunner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.CommandRunner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.ICommandRunner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.ICommandRunner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.Results.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.Results.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.Lib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.Lib.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.PiaCtl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.PiaCtl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.PiaCtlOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.PiaCtlOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Ctl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Ctl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.DependencyInjection.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.DependencyInjection.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Examples.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Examples.Program.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Examples.SomeClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Examples.SomeClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cmpnnt.Pia.Examples.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cmpnnt.Pia.Examples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/references.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/references.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "articles/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

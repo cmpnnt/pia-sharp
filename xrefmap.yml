@@ -1,0 +1,1273 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Cmpnnt.Pia.Ctl
+  name: Cmpnnt.Pia.Ctl
+  href: api/Cmpnnt.Pia.Ctl.html
+  commentId: N:Cmpnnt.Pia.Ctl
+  fullName: Cmpnnt.Pia.Ctl
+  nameWithType: Cmpnnt.Pia.Ctl
+- uid: Cmpnnt.Pia.Ctl.Enums
+  name: Cmpnnt.Pia.Ctl.Enums
+  href: api/Cmpnnt.Pia.Ctl.Enums.html
+  commentId: N:Cmpnnt.Pia.Ctl.Enums
+  fullName: Cmpnnt.Pia.Ctl.Enums
+  nameWithType: Cmpnnt.Pia.Ctl.Enums
+- uid: Cmpnnt.Pia.Ctl.Enums.Command
+  name: Command
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html
+  commentId: T:Cmpnnt.Pia.Ctl.Enums.Command
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command
+  nameWithType: Command
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.Background
+  name: Background
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_Background
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.Background
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.Background
+  nameWithType: Command.Background
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.Connect
+  name: Connect
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_Connect
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.Connect
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.Connect
+  nameWithType: Command.Connect
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.DedicatedIp
+  name: DedicatedIp
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_DedicatedIp
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.DedicatedIp
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.DedicatedIp
+  nameWithType: Command.DedicatedIp
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.Disconnect
+  name: Disconnect
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_Disconnect
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.Disconnect
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.Disconnect
+  nameWithType: Command.Disconnect
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.Get
+  name: Get
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_Get
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.Get
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.Get
+  nameWithType: Command.Get
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.Login
+  name: Login
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_Login
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.Login
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.Login
+  nameWithType: Command.Login
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.Logout
+  name: Logout
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_Logout
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.Logout
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.Logout
+  nameWithType: Command.Logout
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.Monitor
+  name: Monitor
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_Monitor
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.Monitor
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.Monitor
+  nameWithType: Command.Monitor
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.None
+  name: None
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_None
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.None
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.None
+  nameWithType: Command.None
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.ResetSettings
+  name: ResetSettings
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_ResetSettings
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.ResetSettings
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.ResetSettings
+  nameWithType: Command.ResetSettings
+- uid: Cmpnnt.Pia.Ctl.Enums.Command.Set
+  name: Set
+  href: api/Cmpnnt.Pia.Ctl.Enums.Command.html#Cmpnnt_Pia_Ctl_Enums_Command_Set
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Command.Set
+  fullName: Cmpnnt.Pia.Ctl.Enums.Command.Set
+  nameWithType: Command.Set
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction
+  name: DaemonAction
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html
+  commentId: T:Cmpnnt.Pia.Ctl.Enums.DaemonAction
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction
+  nameWithType: DaemonAction
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.AllowLan
+  name: AllowLan
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_AllowLan
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.AllowLan
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.AllowLan
+  nameWithType: DaemonAction.AllowLan
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.ConnectionState
+  name: ConnectionState
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_ConnectionState
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.ConnectionState
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.ConnectionState
+  nameWithType: DaemonAction.ConnectionState
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.DebugLogging
+  name: DebugLogging
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_DebugLogging
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.DebugLogging
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.DebugLogging
+  nameWithType: DaemonAction.DebugLogging
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.None
+  name: None
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_None
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.None
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.None
+  nameWithType: DaemonAction.None
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.PortForward
+  name: PortForward
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_PortForward
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.PortForward
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.PortForward
+  nameWithType: DaemonAction.PortForward
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.Protocol
+  name: Protocol
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_Protocol
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.Protocol
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.Protocol
+  nameWithType: DaemonAction.Protocol
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.PubIp
+  name: PubIp
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_PubIp
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.PubIp
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.PubIp
+  nameWithType: DaemonAction.PubIp
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.Region
+  name: Region
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_Region
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.Region
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.Region
+  nameWithType: DaemonAction.Region
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.Regions
+  name: Regions
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_Regions
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.Regions
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.Regions
+  nameWithType: DaemonAction.Regions
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.RequestPortForward
+  name: RequestPortForward
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_RequestPortForward
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.RequestPortForward
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.RequestPortForward
+  nameWithType: DaemonAction.RequestPortForward
+- uid: Cmpnnt.Pia.Ctl.Enums.DaemonAction.VpnIp
+  name: VpnIp
+  href: api/Cmpnnt.Pia.Ctl.Enums.DaemonAction.html#Cmpnnt_Pia_Ctl_Enums_DaemonAction_VpnIp
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.VpnIp
+  fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.VpnIp
+  nameWithType: DaemonAction.VpnIp
+- uid: Cmpnnt.Pia.Ctl.Enums.Status
+  name: Status
+  href: api/Cmpnnt.Pia.Ctl.Enums.Status.html
+  commentId: T:Cmpnnt.Pia.Ctl.Enums.Status
+  fullName: Cmpnnt.Pia.Ctl.Enums.Status
+  nameWithType: Status
+- uid: Cmpnnt.Pia.Ctl.Enums.Status.Canceled
+  name: Canceled
+  href: api/Cmpnnt.Pia.Ctl.Enums.Status.html#Cmpnnt_Pia_Ctl_Enums_Status_Canceled
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Status.Canceled
+  fullName: Cmpnnt.Pia.Ctl.Enums.Status.Canceled
+  nameWithType: Status.Canceled
+- uid: Cmpnnt.Pia.Ctl.Enums.Status.Completed
+  name: Completed
+  href: api/Cmpnnt.Pia.Ctl.Enums.Status.html#Cmpnnt_Pia_Ctl_Enums_Status_Completed
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Status.Completed
+  fullName: Cmpnnt.Pia.Ctl.Enums.Status.Completed
+  nameWithType: Status.Completed
+- uid: Cmpnnt.Pia.Ctl.Enums.Status.Error
+  name: Error
+  href: api/Cmpnnt.Pia.Ctl.Enums.Status.html#Cmpnnt_Pia_Ctl_Enums_Status_Error
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Status.Error
+  fullName: Cmpnnt.Pia.Ctl.Enums.Status.Error
+  nameWithType: Status.Error
+- uid: Cmpnnt.Pia.Ctl.Enums.Status.NotStarted
+  name: NotStarted
+  href: api/Cmpnnt.Pia.Ctl.Enums.Status.html#Cmpnnt_Pia_Ctl_Enums_Status_NotStarted
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Status.NotStarted
+  fullName: Cmpnnt.Pia.Ctl.Enums.Status.NotStarted
+  nameWithType: Status.NotStarted
+- uid: Cmpnnt.Pia.Ctl.Enums.Status.Started
+  name: Started
+  href: api/Cmpnnt.Pia.Ctl.Enums.Status.html#Cmpnnt_Pia_Ctl_Enums_Status_Started
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.Status.Started
+  fullName: Cmpnnt.Pia.Ctl.Enums.Status.Started
+  nameWithType: Status.Started
+- uid: Cmpnnt.Pia.Ctl.Extensions
+  name: Cmpnnt.Pia.Ctl.Extensions
+  href: api/Cmpnnt.Pia.Ctl.Extensions.html
+  commentId: N:Cmpnnt.Pia.Ctl.Extensions
+  fullName: Cmpnnt.Pia.Ctl.Extensions
+  nameWithType: Cmpnnt.Pia.Ctl.Extensions
+- uid: Cmpnnt.Pia.Ctl.Extensions.CommandExtensions
+  name: CommandExtensions
+  href: api/Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.html
+  commentId: T:Cmpnnt.Pia.Ctl.Extensions.CommandExtensions
+  fullName: Cmpnnt.Pia.Ctl.Extensions.CommandExtensions
+  nameWithType: CommandExtensions
+- uid: Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.Command)
+  name: ToStringF(Command)
+  href: api/Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.html#Cmpnnt_Pia_Ctl_Extensions_CommandExtensions_ToStringF_Cmpnnt_Pia_Ctl_Enums_Command_
+  commentId: M:Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.Command)
+  fullName: Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.Command)
+  nameWithType: CommandExtensions.ToStringF(Command)
+- uid: Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.ToStringF*
+  name: ToStringF
+  href: api/Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.html#Cmpnnt_Pia_Ctl_Extensions_CommandExtensions_ToStringF_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.ToStringF
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.ToStringF
+  nameWithType: CommandExtensions.ToStringF
+- uid: Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions
+  name: DaemonActionExtensions
+  href: api/Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.html
+  commentId: T:Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions
+  fullName: Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions
+  nameWithType: DaemonActionExtensions
+- uid: Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.DaemonAction)
+  name: ToStringF(DaemonAction)
+  href: api/Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.html#Cmpnnt_Pia_Ctl_Extensions_DaemonActionExtensions_ToStringF_Cmpnnt_Pia_Ctl_Enums_DaemonAction_
+  commentId: M:Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.DaemonAction)
+  fullName: Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.DaemonAction)
+  nameWithType: DaemonActionExtensions.ToStringF(DaemonAction)
+- uid: Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.ToStringF*
+  name: ToStringF
+  href: api/Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.html#Cmpnnt_Pia_Ctl_Extensions_DaemonActionExtensions_ToStringF_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.ToStringF
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.ToStringF
+  nameWithType: DaemonActionExtensions.ToStringF
+- uid: Cmpnnt.Pia.Ctl.Extensions.StatusExtensions
+  name: StatusExtensions
+  href: api/Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.html
+  commentId: T:Cmpnnt.Pia.Ctl.Extensions.StatusExtensions
+  fullName: Cmpnnt.Pia.Ctl.Extensions.StatusExtensions
+  nameWithType: StatusExtensions
+- uid: Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.Status)
+  name: ToStringF(Status)
+  href: api/Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.html#Cmpnnt_Pia_Ctl_Extensions_StatusExtensions_ToStringF_Cmpnnt_Pia_Ctl_Enums_Status_
+  commentId: M:Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.Status)
+  fullName: Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.Status)
+  nameWithType: StatusExtensions.ToStringF(Status)
+- uid: Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.ToStringF*
+  name: ToStringF
+  href: api/Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.html#Cmpnnt_Pia_Ctl_Extensions_StatusExtensions_ToStringF_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.ToStringF
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.ToStringF
+  nameWithType: StatusExtensions.ToStringF
+- uid: Cmpnnt.Pia.Ctl.Lib
+  name: Cmpnnt.Pia.Ctl.Lib
+  href: api/Cmpnnt.Pia.Ctl.Lib.html
+  commentId: N:Cmpnnt.Pia.Ctl.Lib
+  fullName: Cmpnnt.Pia.Ctl.Lib
+  nameWithType: Cmpnnt.Pia.Ctl.Lib
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper
+  name: CommandLineWrapper
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.html
+  commentId: T:Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper
+  nameWithType: CommandLineWrapper
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.Execute(System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Threading.CancellationToken)
+  name: Execute(string, PiaCtlOptions, CancellationToken)
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.html#Cmpnnt_Pia_Ctl_Lib_CommandLineWrapper_Execute_System_String_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Threading_CancellationToken_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.Execute(System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Threading.CancellationToken)
+  name.vb: Execute(String, PiaCtlOptions, CancellationToken)
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.Execute(string, Cmpnnt.Pia.Ctl.PiaCtlOptions, System.Threading.CancellationToken)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.Execute(String, Cmpnnt.Pia.Ctl.PiaCtlOptions, System.Threading.CancellationToken)
+  nameWithType: CommandLineWrapper.Execute(string, PiaCtlOptions, CancellationToken)
+  nameWithType.vb: CommandLineWrapper.Execute(String, PiaCtlOptions, CancellationToken)
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.Execute*
+  name: Execute
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.html#Cmpnnt_Pia_Ctl_Lib_CommandLineWrapper_Execute_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.Execute
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.Execute
+  nameWithType: CommandLineWrapper.Execute
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.ExecuteTimed(System.UInt32,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  name: ExecuteTimed(uint, string, PiaCtlOptions)
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.html#Cmpnnt_Pia_Ctl_Lib_CommandLineWrapper_ExecuteTimed_System_UInt32_System_String_Cmpnnt_Pia_Ctl_PiaCtlOptions_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.ExecuteTimed(System.UInt32,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  name.vb: ExecuteTimed(UInteger, String, PiaCtlOptions)
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.ExecuteTimed(uint, string, Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.ExecuteTimed(UInteger, String, Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  nameWithType: CommandLineWrapper.ExecuteTimed(uint, string, PiaCtlOptions)
+  nameWithType.vb: CommandLineWrapper.ExecuteTimed(UInteger, String, PiaCtlOptions)
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.ExecuteTimed*
+  name: ExecuteTimed
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.html#Cmpnnt_Pia_Ctl_Lib_CommandLineWrapper_ExecuteTimed_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.ExecuteTimed
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.ExecuteTimed
+  nameWithType: CommandLineWrapper.ExecuteTimed
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandRunner
+  name: CommandRunner
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandRunner.html
+  commentId: T:Cmpnnt.Pia.Ctl.Lib.CommandRunner
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandRunner
+  nameWithType: CommandRunner
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name: Run(ExecuteDelegate, Command, DaemonAction, PiaCtlOptions, bool)
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandRunner.html#Cmpnnt_Pia_Ctl_Lib_CommandRunner_Run_Cmpnnt_Pia_Ctl_Lib_ExecuteDelegate_Cmpnnt_Pia_Ctl_Enums_Command_Cmpnnt_Pia_Ctl_Enums_DaemonAction_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name.vb: Run(ExecuteDelegate, Command, DaemonAction, PiaCtlOptions, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, Cmpnnt.Pia.Ctl.PiaCtlOptions, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, Cmpnnt.Pia.Ctl.PiaCtlOptions, Boolean)
+  nameWithType: CommandRunner.Run(ExecuteDelegate, Command, DaemonAction, PiaCtlOptions, bool)
+  nameWithType.vb: CommandRunner.Run(ExecuteDelegate, Command, DaemonAction, PiaCtlOptions, Boolean)
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.Boolean,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name: Run(ExecuteDelegate, Command, DaemonAction, bool, PiaCtlOptions, bool)
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandRunner.html#Cmpnnt_Pia_Ctl_Lib_CommandRunner_Run_Cmpnnt_Pia_Ctl_Lib_ExecuteDelegate_Cmpnnt_Pia_Ctl_Enums_Command_Cmpnnt_Pia_Ctl_Enums_DaemonAction_System_Boolean_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.Boolean,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name.vb: Run(ExecuteDelegate, Command, DaemonAction, Boolean, PiaCtlOptions, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, bool, Cmpnnt.Pia.Ctl.PiaCtlOptions, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, Boolean, Cmpnnt.Pia.Ctl.PiaCtlOptions, Boolean)
+  nameWithType: CommandRunner.Run(ExecuteDelegate, Command, DaemonAction, bool, PiaCtlOptions, bool)
+  nameWithType.vb: CommandRunner.Run(ExecuteDelegate, Command, DaemonAction, Boolean, PiaCtlOptions, Boolean)
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name: Run(ExecuteDelegate, Command, DaemonAction, string, PiaCtlOptions, bool)
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandRunner.html#Cmpnnt_Pia_Ctl_Lib_CommandRunner_Run_Cmpnnt_Pia_Ctl_Lib_ExecuteDelegate_Cmpnnt_Pia_Ctl_Enums_Command_Cmpnnt_Pia_Ctl_Enums_DaemonAction_System_String_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name.vb: Run(ExecuteDelegate, Command, DaemonAction, String, PiaCtlOptions, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, string, Cmpnnt.Pia.Ctl.PiaCtlOptions, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, String, Cmpnnt.Pia.Ctl.PiaCtlOptions, Boolean)
+  nameWithType: CommandRunner.Run(ExecuteDelegate, Command, DaemonAction, string, PiaCtlOptions, bool)
+  nameWithType.vb: CommandRunner.Run(ExecuteDelegate, Command, DaemonAction, String, PiaCtlOptions, Boolean)
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.String,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name: Run(ExecuteDelegate, Command, DaemonAction, string, string, PiaCtlOptions, bool)
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandRunner.html#Cmpnnt_Pia_Ctl_Lib_CommandRunner_Run_Cmpnnt_Pia_Ctl_Lib_ExecuteDelegate_Cmpnnt_Pia_Ctl_Enums_Command_Cmpnnt_Pia_Ctl_Enums_DaemonAction_System_String_System_String_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.String,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name.vb: Run(ExecuteDelegate, Command, DaemonAction, String, String, PiaCtlOptions, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, string, string, Cmpnnt.Pia.Ctl.PiaCtlOptions, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, String, String, Cmpnnt.Pia.Ctl.PiaCtlOptions, Boolean)
+  nameWithType: CommandRunner.Run(ExecuteDelegate, Command, DaemonAction, string, string, PiaCtlOptions, bool)
+  nameWithType.vb: CommandRunner.Run(ExecuteDelegate, Command, DaemonAction, String, String, PiaCtlOptions, Boolean)
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.UInt32,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name: Run(ExecuteTimedDelegate, Command, DaemonAction, uint, PiaCtlOptions, bool)
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandRunner.html#Cmpnnt_Pia_Ctl_Lib_CommandRunner_Run_Cmpnnt_Pia_Ctl_Lib_ExecuteTimedDelegate_Cmpnnt_Pia_Ctl_Enums_Command_Cmpnnt_Pia_Ctl_Enums_DaemonAction_System_UInt32_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.UInt32,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name.vb: Run(ExecuteTimedDelegate, Command, DaemonAction, UInteger, PiaCtlOptions, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, uint, Cmpnnt.Pia.Ctl.PiaCtlOptions, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, UInteger, Cmpnnt.Pia.Ctl.PiaCtlOptions, Boolean)
+  nameWithType: CommandRunner.Run(ExecuteTimedDelegate, Command, DaemonAction, uint, PiaCtlOptions, bool)
+  nameWithType.vb: CommandRunner.Run(ExecuteTimedDelegate, Command, DaemonAction, UInteger, PiaCtlOptions, Boolean)
+- uid: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run*
+  name: Run
+  href: api/Cmpnnt.Pia.Ctl.Lib.CommandRunner.html#Cmpnnt_Pia_Ctl_Lib_CommandRunner_Run_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.CommandRunner.Run
+  nameWithType: CommandRunner.Run
+- uid: Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate
+  name: ExecuteDelegate
+  href: api/Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate.html
+  commentId: T:Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate
+  fullName: Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate
+  nameWithType: ExecuteDelegate
+- uid: Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate
+  name: ExecuteTimedDelegate
+  href: api/Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate.html
+  commentId: T:Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate
+  fullName: Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate
+  nameWithType: ExecuteTimedDelegate
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper
+  name: ICommandLineWrapper
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.html
+  commentId: T:Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper
+  nameWithType: ICommandLineWrapper
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.Execute(System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Threading.CancellationToken)
+  name: Execute(string, PiaCtlOptions, CancellationToken)
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.html#Cmpnnt_Pia_Ctl_Lib_ICommandLineWrapper_Execute_System_String_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Threading_CancellationToken_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.Execute(System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Threading.CancellationToken)
+  name.vb: Execute(String, PiaCtlOptions, CancellationToken)
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.Execute(string, Cmpnnt.Pia.Ctl.PiaCtlOptions, System.Threading.CancellationToken)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.Execute(String, Cmpnnt.Pia.Ctl.PiaCtlOptions, System.Threading.CancellationToken)
+  nameWithType: ICommandLineWrapper.Execute(string, PiaCtlOptions, CancellationToken)
+  nameWithType.vb: ICommandLineWrapper.Execute(String, PiaCtlOptions, CancellationToken)
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.Execute*
+  name: Execute
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.html#Cmpnnt_Pia_Ctl_Lib_ICommandLineWrapper_Execute_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.Execute
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.Execute
+  nameWithType: ICommandLineWrapper.Execute
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.ExecuteTimed(System.UInt32,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  name: ExecuteTimed(uint, string, PiaCtlOptions)
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.html#Cmpnnt_Pia_Ctl_Lib_ICommandLineWrapper_ExecuteTimed_System_UInt32_System_String_Cmpnnt_Pia_Ctl_PiaCtlOptions_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.ExecuteTimed(System.UInt32,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  name.vb: ExecuteTimed(UInteger, String, PiaCtlOptions)
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.ExecuteTimed(uint, string, Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.ExecuteTimed(UInteger, String, Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  nameWithType: ICommandLineWrapper.ExecuteTimed(uint, string, PiaCtlOptions)
+  nameWithType.vb: ICommandLineWrapper.ExecuteTimed(UInteger, String, PiaCtlOptions)
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.ExecuteTimed*
+  name: ExecuteTimed
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.html#Cmpnnt_Pia_Ctl_Lib_ICommandLineWrapper_ExecuteTimed_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.ExecuteTimed
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper.ExecuteTimed
+  nameWithType: ICommandLineWrapper.ExecuteTimed
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandRunner
+  name: ICommandRunner
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandRunner.html
+  commentId: T:Cmpnnt.Pia.Ctl.Lib.ICommandRunner
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandRunner
+  nameWithType: ICommandRunner
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name: Run(ExecuteDelegate, Command, DaemonAction, PiaCtlOptions, bool)
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandRunner.html#Cmpnnt_Pia_Ctl_Lib_ICommandRunner_Run_Cmpnnt_Pia_Ctl_Lib_ExecuteDelegate_Cmpnnt_Pia_Ctl_Enums_Command_Cmpnnt_Pia_Ctl_Enums_DaemonAction_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name.vb: Run(ExecuteDelegate, Command, DaemonAction, PiaCtlOptions, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, Cmpnnt.Pia.Ctl.PiaCtlOptions, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, Cmpnnt.Pia.Ctl.PiaCtlOptions, Boolean)
+  nameWithType: ICommandRunner.Run(ExecuteDelegate, Command, DaemonAction, PiaCtlOptions, bool)
+  nameWithType.vb: ICommandRunner.Run(ExecuteDelegate, Command, DaemonAction, PiaCtlOptions, Boolean)
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.Boolean,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name: Run(ExecuteDelegate, Command, DaemonAction, bool, PiaCtlOptions, bool)
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandRunner.html#Cmpnnt_Pia_Ctl_Lib_ICommandRunner_Run_Cmpnnt_Pia_Ctl_Lib_ExecuteDelegate_Cmpnnt_Pia_Ctl_Enums_Command_Cmpnnt_Pia_Ctl_Enums_DaemonAction_System_Boolean_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.Boolean,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name.vb: Run(ExecuteDelegate, Command, DaemonAction, Boolean, PiaCtlOptions, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, bool, Cmpnnt.Pia.Ctl.PiaCtlOptions, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, Boolean, Cmpnnt.Pia.Ctl.PiaCtlOptions, Boolean)
+  nameWithType: ICommandRunner.Run(ExecuteDelegate, Command, DaemonAction, bool, PiaCtlOptions, bool)
+  nameWithType.vb: ICommandRunner.Run(ExecuteDelegate, Command, DaemonAction, Boolean, PiaCtlOptions, Boolean)
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name: Run(ExecuteDelegate, Command, DaemonAction, string, PiaCtlOptions, bool)
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandRunner.html#Cmpnnt_Pia_Ctl_Lib_ICommandRunner_Run_Cmpnnt_Pia_Ctl_Lib_ExecuteDelegate_Cmpnnt_Pia_Ctl_Enums_Command_Cmpnnt_Pia_Ctl_Enums_DaemonAction_System_String_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name.vb: Run(ExecuteDelegate, Command, DaemonAction, String, PiaCtlOptions, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, string, Cmpnnt.Pia.Ctl.PiaCtlOptions, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, String, Cmpnnt.Pia.Ctl.PiaCtlOptions, Boolean)
+  nameWithType: ICommandRunner.Run(ExecuteDelegate, Command, DaemonAction, string, PiaCtlOptions, bool)
+  nameWithType.vb: ICommandRunner.Run(ExecuteDelegate, Command, DaemonAction, String, PiaCtlOptions, Boolean)
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.String,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name: Run(ExecuteDelegate, Command, DaemonAction, string, string, PiaCtlOptions, bool)
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandRunner.html#Cmpnnt_Pia_Ctl_Lib_ICommandRunner_Run_Cmpnnt_Pia_Ctl_Lib_ExecuteDelegate_Cmpnnt_Pia_Ctl_Enums_Command_Cmpnnt_Pia_Ctl_Enums_DaemonAction_System_String_System_String_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.String,System.String,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name.vb: Run(ExecuteDelegate, Command, DaemonAction, String, String, PiaCtlOptions, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, string, string, Cmpnnt.Pia.Ctl.PiaCtlOptions, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, String, String, Cmpnnt.Pia.Ctl.PiaCtlOptions, Boolean)
+  nameWithType: ICommandRunner.Run(ExecuteDelegate, Command, DaemonAction, string, string, PiaCtlOptions, bool)
+  nameWithType.vb: ICommandRunner.Run(ExecuteDelegate, Command, DaemonAction, String, String, PiaCtlOptions, Boolean)
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.UInt32,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name: Run(ExecuteTimedDelegate, Command, DaemonAction, uint, PiaCtlOptions, bool)
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandRunner.html#Cmpnnt_Pia_Ctl_Lib_ICommandRunner_Run_Cmpnnt_Pia_Ctl_Lib_ExecuteTimedDelegate_Cmpnnt_Pia_Ctl_Enums_Command_Cmpnnt_Pia_Ctl_Enums_DaemonAction_System_UInt32_Cmpnnt_Pia_Ctl_PiaCtlOptions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate,Cmpnnt.Pia.Ctl.Enums.Command,Cmpnnt.Pia.Ctl.Enums.DaemonAction,System.UInt32,Cmpnnt.Pia.Ctl.PiaCtlOptions,System.Boolean)
+  name.vb: Run(ExecuteTimedDelegate, Command, DaemonAction, UInteger, PiaCtlOptions, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, uint, Cmpnnt.Pia.Ctl.PiaCtlOptions, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run(Cmpnnt.Pia.Ctl.Lib.ExecuteTimedDelegate, Cmpnnt.Pia.Ctl.Enums.Command, Cmpnnt.Pia.Ctl.Enums.DaemonAction, UInteger, Cmpnnt.Pia.Ctl.PiaCtlOptions, Boolean)
+  nameWithType: ICommandRunner.Run(ExecuteTimedDelegate, Command, DaemonAction, uint, PiaCtlOptions, bool)
+  nameWithType.vb: ICommandRunner.Run(ExecuteTimedDelegate, Command, DaemonAction, UInteger, PiaCtlOptions, Boolean)
+- uid: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run*
+  name: Run
+  href: api/Cmpnnt.Pia.Ctl.Lib.ICommandRunner.html#Cmpnnt_Pia_Ctl_Lib_ICommandRunner_Run_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.ICommandRunner.Run
+  nameWithType: ICommandRunner.Run
+- uid: Cmpnnt.Pia.Ctl.Lib.PiaEnvironment
+  name: PiaEnvironment
+  href: api/Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.html
+  commentId: T:Cmpnnt.Pia.Ctl.Lib.PiaEnvironment
+  fullName: Cmpnnt.Pia.Ctl.Lib.PiaEnvironment
+  nameWithType: PiaEnvironment
+- uid: Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.PiaPath
+  name: PiaPath
+  href: api/Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.html#Cmpnnt_Pia_Ctl_Lib_PiaEnvironment_PiaPath
+  commentId: P:Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.PiaPath
+  fullName: Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.PiaPath
+  nameWithType: PiaEnvironment.PiaPath
+- uid: Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.PiaPath*
+  name: PiaPath
+  href: api/Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.html#Cmpnnt_Pia_Ctl_Lib_PiaEnvironment_PiaPath_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.PiaPath
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.PiaEnvironment.PiaPath
+  nameWithType: PiaEnvironment.PiaPath
+- uid: Cmpnnt.Pia.Ctl.Lib.Results
+  name: Cmpnnt.Pia.Ctl.Lib.Results
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.html
+  commentId: N:Cmpnnt.Pia.Ctl.Lib.Results
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results
+  nameWithType: Cmpnnt.Pia.Ctl.Lib.Results
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults
+  name: ICliResults
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.html
+  commentId: T:Cmpnnt.Pia.Ctl.Lib.Results.ICliResults
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults
+  nameWithType: ICliResults
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardErrorResults
+  name: StandardErrorResults
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.html#Cmpnnt_Pia_Ctl_Lib_Results_ICliResults_StandardErrorResults
+  commentId: P:Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardErrorResults
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardErrorResults
+  nameWithType: ICliResults.StandardErrorResults
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardErrorResults*
+  name: StandardErrorResults
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.html#Cmpnnt_Pia_Ctl_Lib_Results_ICliResults_StandardErrorResults_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardErrorResults
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardErrorResults
+  nameWithType: ICliResults.StandardErrorResults
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardOutputResults
+  name: StandardOutputResults
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.html#Cmpnnt_Pia_Ctl_Lib_Results_ICliResults_StandardOutputResults
+  commentId: P:Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardOutputResults
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardOutputResults
+  nameWithType: ICliResults.StandardOutputResults
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardOutputResults*
+  name: StandardOutputResults
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.html#Cmpnnt_Pia_Ctl_Lib_Results_ICliResults_StandardOutputResults_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardOutputResults
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.StandardOutputResults
+  nameWithType: ICliResults.StandardOutputResults
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.Status
+  name: Status
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.html#Cmpnnt_Pia_Ctl_Lib_Results_ICliResults_Status
+  commentId: P:Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.Status
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.Status
+  nameWithType: ICliResults.Status
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.Status*
+  name: Status
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.html#Cmpnnt_Pia_Ctl_Lib_Results_ICliResults_Status_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.Status
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.ICliResults.Status
+  nameWithType: ICliResults.Status
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults
+  name: PiaResults
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html
+  commentId: T:Cmpnnt.Pia.Ctl.Lib.Results.PiaResults
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults
+  nameWithType: PiaResults
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardErrorResults
+  name: StandardErrorResults
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html#Cmpnnt_Pia_Ctl_Lib_Results_PiaResults_StandardErrorResults
+  commentId: P:Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardErrorResults
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardErrorResults
+  nameWithType: PiaResults.StandardErrorResults
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardErrorResults*
+  name: StandardErrorResults
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html#Cmpnnt_Pia_Ctl_Lib_Results_PiaResults_StandardErrorResults_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardErrorResults
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardErrorResults
+  nameWithType: PiaResults.StandardErrorResults
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardOutputResults
+  name: StandardOutputResults
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html#Cmpnnt_Pia_Ctl_Lib_Results_PiaResults_StandardOutputResults
+  commentId: P:Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardOutputResults
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardOutputResults
+  nameWithType: PiaResults.StandardOutputResults
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardOutputResults*
+  name: StandardOutputResults
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html#Cmpnnt_Pia_Ctl_Lib_Results_PiaResults_StandardOutputResults_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardOutputResults
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.StandardOutputResults
+  nameWithType: PiaResults.StandardOutputResults
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.Status
+  name: Status
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html#Cmpnnt_Pia_Ctl_Lib_Results_PiaResults_Status
+  commentId: P:Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.Status
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.Status
+  nameWithType: PiaResults.Status
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.Status*
+  name: Status
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html#Cmpnnt_Pia_Ctl_Lib_Results_PiaResults_Status_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.Status
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.Status
+  nameWithType: PiaResults.Status
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.ToString
+  name: ToString()
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html#Cmpnnt_Pia_Ctl_Lib_Results_PiaResults_ToString
+  commentId: M:Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.ToString
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.ToString()
+  nameWithType: PiaResults.ToString()
+- uid: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.ToString*
+  name: ToString
+  href: api/Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.html#Cmpnnt_Pia_Ctl_Lib_Results_PiaResults_ToString_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.ToString
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Lib.Results.PiaResults.ToString
+  nameWithType: PiaResults.ToString
+- uid: Cmpnnt.Pia.Ctl.PiaCtl
+  name: PiaCtl
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html
+  commentId: T:Cmpnnt.Pia.Ctl.PiaCtl
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl
+  nameWithType: PiaCtl
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.#ctor
+  name: PiaCtl()
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl__ctor
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.#ctor
+  name.vb: New()
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.PiaCtl()
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.New()
+  nameWithType: PiaCtl.PiaCtl()
+  nameWithType.vb: PiaCtl.New()
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.#ctor(Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper)
+  name: PiaCtl(ICommandLineWrapper)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl__ctor_Cmpnnt_Pia_Ctl_Lib_ICommandLineWrapper_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.#ctor(Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper)
+  name.vb: New(ICommandLineWrapper)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.PiaCtl(Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.New(Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper)
+  nameWithType: PiaCtl.PiaCtl(ICommandLineWrapper)
+  nameWithType.vb: PiaCtl.New(ICommandLineWrapper)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.#ctor(Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  name: PiaCtl(PiaCtlOptions)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl__ctor_Cmpnnt_Pia_Ctl_PiaCtlOptions_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.#ctor(Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  name.vb: New(PiaCtlOptions)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.PiaCtl(Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.New(Cmpnnt.Pia.Ctl.PiaCtlOptions)
+  nameWithType: PiaCtl.PiaCtl(PiaCtlOptions)
+  nameWithType.vb: PiaCtl.New(PiaCtlOptions)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.#ctor(Cmpnnt.Pia.Ctl.PiaCtlOptions,Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper)
+  name: PiaCtl(PiaCtlOptions, ICommandLineWrapper)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl__ctor_Cmpnnt_Pia_Ctl_PiaCtlOptions_Cmpnnt_Pia_Ctl_Lib_ICommandLineWrapper_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.#ctor(Cmpnnt.Pia.Ctl.PiaCtlOptions,Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper)
+  name.vb: New(PiaCtlOptions, ICommandLineWrapper)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.PiaCtl(Cmpnnt.Pia.Ctl.PiaCtlOptions, Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.New(Cmpnnt.Pia.Ctl.PiaCtlOptions, Cmpnnt.Pia.Ctl.Lib.ICommandLineWrapper)
+  nameWithType: PiaCtl.PiaCtl(PiaCtlOptions, ICommandLineWrapper)
+  nameWithType.vb: PiaCtl.New(PiaCtlOptions, ICommandLineWrapper)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.#ctor*
+  name: PiaCtl
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl__ctor_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.PiaCtl
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.New
+  nameWithType: PiaCtl.PiaCtl
+  nameWithType.vb: PiaCtl.New
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.AddDedicatedIp(System.String,System.Boolean)
+  name: AddDedicatedIp(string, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_AddDedicatedIp_System_String_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.AddDedicatedIp(System.String,System.Boolean)
+  name.vb: AddDedicatedIp(String, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.AddDedicatedIp(string, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.AddDedicatedIp(String, Boolean)
+  nameWithType: PiaCtl.AddDedicatedIp(string, bool)
+  nameWithType.vb: PiaCtl.AddDedicatedIp(String, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.AddDedicatedIp*
+  name: AddDedicatedIp
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_AddDedicatedIp_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.AddDedicatedIp
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.AddDedicatedIp
+  nameWithType: PiaCtl.AddDedicatedIp
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.BackgroundDisable(System.Boolean)
+  name: BackgroundDisable(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_BackgroundDisable_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.BackgroundDisable(System.Boolean)
+  name.vb: BackgroundDisable(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.BackgroundDisable(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.BackgroundDisable(Boolean)
+  nameWithType: PiaCtl.BackgroundDisable(bool)
+  nameWithType.vb: PiaCtl.BackgroundDisable(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.BackgroundDisable*
+  name: BackgroundDisable
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_BackgroundDisable_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.BackgroundDisable
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.BackgroundDisable
+  nameWithType: PiaCtl.BackgroundDisable
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.BackgroundEnable(System.Boolean)
+  name: BackgroundEnable(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_BackgroundEnable_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.BackgroundEnable(System.Boolean)
+  name.vb: BackgroundEnable(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.BackgroundEnable(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.BackgroundEnable(Boolean)
+  nameWithType: PiaCtl.BackgroundEnable(bool)
+  nameWithType.vb: PiaCtl.BackgroundEnable(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.BackgroundEnable*
+  name: BackgroundEnable
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_BackgroundEnable_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.BackgroundEnable
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.BackgroundEnable
+  nameWithType: PiaCtl.BackgroundEnable
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.Connect(System.Boolean)
+  name: Connect(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_Connect_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.Connect(System.Boolean)
+  name.vb: Connect(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.Connect(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.Connect(Boolean)
+  nameWithType: PiaCtl.Connect(bool)
+  nameWithType.vb: PiaCtl.Connect(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.Connect*
+  name: Connect
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_Connect_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.Connect
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.Connect
+  nameWithType: PiaCtl.Connect
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.Disconnect(System.Boolean)
+  name: Disconnect(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_Disconnect_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.Disconnect(System.Boolean)
+  name.vb: Disconnect(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.Disconnect(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.Disconnect(Boolean)
+  nameWithType: PiaCtl.Disconnect(bool)
+  nameWithType.vb: PiaCtl.Disconnect(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.Disconnect*
+  name: Disconnect
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_Disconnect_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.Disconnect
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.Disconnect
+  nameWithType: PiaCtl.Disconnect
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetAllowLan(System.Boolean)
+  name: GetAllowLan(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetAllowLan_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.GetAllowLan(System.Boolean)
+  name.vb: GetAllowLan(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetAllowLan(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.GetAllowLan(Boolean)
+  nameWithType: PiaCtl.GetAllowLan(bool)
+  nameWithType.vb: PiaCtl.GetAllowLan(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetAllowLan*
+  name: GetAllowLan
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetAllowLan_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.GetAllowLan
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetAllowLan
+  nameWithType: PiaCtl.GetAllowLan
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetConnectionState(System.Boolean)
+  name: GetConnectionState(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetConnectionState_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.GetConnectionState(System.Boolean)
+  name.vb: GetConnectionState(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetConnectionState(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.GetConnectionState(Boolean)
+  nameWithType: PiaCtl.GetConnectionState(bool)
+  nameWithType.vb: PiaCtl.GetConnectionState(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetConnectionState*
+  name: GetConnectionState
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetConnectionState_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.GetConnectionState
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetConnectionState
+  nameWithType: PiaCtl.GetConnectionState
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetDebugLogging(System.Boolean)
+  name: GetDebugLogging(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetDebugLogging_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.GetDebugLogging(System.Boolean)
+  name.vb: GetDebugLogging(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetDebugLogging(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.GetDebugLogging(Boolean)
+  nameWithType: PiaCtl.GetDebugLogging(bool)
+  nameWithType.vb: PiaCtl.GetDebugLogging(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetDebugLogging*
+  name: GetDebugLogging
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetDebugLogging_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.GetDebugLogging
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetDebugLogging
+  nameWithType: PiaCtl.GetDebugLogging
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetPortForward(System.Boolean)
+  name: GetPortForward(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetPortForward_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.GetPortForward(System.Boolean)
+  name.vb: GetPortForward(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetPortForward(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.GetPortForward(Boolean)
+  nameWithType: PiaCtl.GetPortForward(bool)
+  nameWithType.vb: PiaCtl.GetPortForward(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetPortForward*
+  name: GetPortForward
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetPortForward_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.GetPortForward
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetPortForward
+  nameWithType: PiaCtl.GetPortForward
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetProtocol(System.Boolean)
+  name: GetProtocol(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetProtocol_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.GetProtocol(System.Boolean)
+  name.vb: GetProtocol(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetProtocol(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.GetProtocol(Boolean)
+  nameWithType: PiaCtl.GetProtocol(bool)
+  nameWithType.vb: PiaCtl.GetProtocol(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetProtocol*
+  name: GetProtocol
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetProtocol_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.GetProtocol
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetProtocol
+  nameWithType: PiaCtl.GetProtocol
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetPubIp(System.Boolean)
+  name: GetPubIp(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetPubIp_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.GetPubIp(System.Boolean)
+  name.vb: GetPubIp(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetPubIp(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.GetPubIp(Boolean)
+  nameWithType: PiaCtl.GetPubIp(bool)
+  nameWithType.vb: PiaCtl.GetPubIp(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetPubIp*
+  name: GetPubIp
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetPubIp_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.GetPubIp
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetPubIp
+  nameWithType: PiaCtl.GetPubIp
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetRegion(System.Boolean)
+  name: GetRegion(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetRegion_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.GetRegion(System.Boolean)
+  name.vb: GetRegion(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetRegion(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.GetRegion(Boolean)
+  nameWithType: PiaCtl.GetRegion(bool)
+  nameWithType.vb: PiaCtl.GetRegion(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetRegion*
+  name: GetRegion
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetRegion_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.GetRegion
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetRegion
+  nameWithType: PiaCtl.GetRegion
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetRegions(System.Boolean)
+  name: GetRegions(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetRegions_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.GetRegions(System.Boolean)
+  name.vb: GetRegions(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetRegions(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.GetRegions(Boolean)
+  nameWithType: PiaCtl.GetRegions(bool)
+  nameWithType.vb: PiaCtl.GetRegions(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetRegions*
+  name: GetRegions
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetRegions_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.GetRegions
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetRegions
+  nameWithType: PiaCtl.GetRegions
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetRequestPortForward(System.Boolean)
+  name: GetRequestPortForward(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetRequestPortForward_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.GetRequestPortForward(System.Boolean)
+  name.vb: GetRequestPortForward(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetRequestPortForward(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.GetRequestPortForward(Boolean)
+  nameWithType: PiaCtl.GetRequestPortForward(bool)
+  nameWithType.vb: PiaCtl.GetRequestPortForward(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetRequestPortForward*
+  name: GetRequestPortForward
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetRequestPortForward_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.GetRequestPortForward
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetRequestPortForward
+  nameWithType: PiaCtl.GetRequestPortForward
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetVpnIp(System.Boolean)
+  name: GetVpnIp(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetVpnIp_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.GetVpnIp(System.Boolean)
+  name.vb: GetVpnIp(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetVpnIp(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.GetVpnIp(Boolean)
+  nameWithType: PiaCtl.GetVpnIp(bool)
+  nameWithType.vb: PiaCtl.GetVpnIp(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.GetVpnIp*
+  name: GetVpnIp
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_GetVpnIp_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.GetVpnIp
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.GetVpnIp
+  nameWithType: PiaCtl.GetVpnIp
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.Login(System.String,System.Boolean)
+  name: Login(string, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_Login_System_String_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.Login(System.String,System.Boolean)
+  name.vb: Login(String, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.Login(string, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.Login(String, Boolean)
+  nameWithType: PiaCtl.Login(string, bool)
+  nameWithType.vb: PiaCtl.Login(String, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.Login*
+  name: Login
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_Login_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.Login
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.Login
+  nameWithType: PiaCtl.Login
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.Logout(System.Boolean)
+  name: Logout(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_Logout_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.Logout(System.Boolean)
+  name.vb: Logout(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.Logout(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.Logout(Boolean)
+  nameWithType: PiaCtl.Logout(bool)
+  nameWithType.vb: PiaCtl.Logout(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.Logout*
+  name: Logout
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_Logout_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.Logout
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.Logout
+  nameWithType: PiaCtl.Logout
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorAllowLan(System.UInt32,System.Boolean)
+  name: MonitorAllowLan(uint, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorAllowLan_System_UInt32_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.MonitorAllowLan(System.UInt32,System.Boolean)
+  name.vb: MonitorAllowLan(UInteger, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorAllowLan(uint, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.MonitorAllowLan(UInteger, Boolean)
+  nameWithType: PiaCtl.MonitorAllowLan(uint, bool)
+  nameWithType.vb: PiaCtl.MonitorAllowLan(UInteger, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorAllowLan*
+  name: MonitorAllowLan
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorAllowLan_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.MonitorAllowLan
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorAllowLan
+  nameWithType: PiaCtl.MonitorAllowLan
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorConnectionState(System.UInt32,System.Boolean)
+  name: MonitorConnectionState(uint, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorConnectionState_System_UInt32_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.MonitorConnectionState(System.UInt32,System.Boolean)
+  name.vb: MonitorConnectionState(UInteger, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorConnectionState(uint, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.MonitorConnectionState(UInteger, Boolean)
+  nameWithType: PiaCtl.MonitorConnectionState(uint, bool)
+  nameWithType.vb: PiaCtl.MonitorConnectionState(UInteger, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorConnectionState*
+  name: MonitorConnectionState
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorConnectionState_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.MonitorConnectionState
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorConnectionState
+  nameWithType: PiaCtl.MonitorConnectionState
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorDebugLogging(System.UInt32,System.Boolean)
+  name: MonitorDebugLogging(uint, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorDebugLogging_System_UInt32_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.MonitorDebugLogging(System.UInt32,System.Boolean)
+  name.vb: MonitorDebugLogging(UInteger, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorDebugLogging(uint, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.MonitorDebugLogging(UInteger, Boolean)
+  nameWithType: PiaCtl.MonitorDebugLogging(uint, bool)
+  nameWithType.vb: PiaCtl.MonitorDebugLogging(UInteger, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorDebugLogging*
+  name: MonitorDebugLogging
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorDebugLogging_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.MonitorDebugLogging
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorDebugLogging
+  nameWithType: PiaCtl.MonitorDebugLogging
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorPortForward(System.UInt32,System.Boolean)
+  name: MonitorPortForward(uint, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorPortForward_System_UInt32_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.MonitorPortForward(System.UInt32,System.Boolean)
+  name.vb: MonitorPortForward(UInteger, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorPortForward(uint, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.MonitorPortForward(UInteger, Boolean)
+  nameWithType: PiaCtl.MonitorPortForward(uint, bool)
+  nameWithType.vb: PiaCtl.MonitorPortForward(UInteger, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorPortForward*
+  name: MonitorPortForward
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorPortForward_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.MonitorPortForward
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorPortForward
+  nameWithType: PiaCtl.MonitorPortForward
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorProtocol(System.UInt32,System.Boolean)
+  name: MonitorProtocol(uint, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorProtocol_System_UInt32_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.MonitorProtocol(System.UInt32,System.Boolean)
+  name.vb: MonitorProtocol(UInteger, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorProtocol(uint, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.MonitorProtocol(UInteger, Boolean)
+  nameWithType: PiaCtl.MonitorProtocol(uint, bool)
+  nameWithType.vb: PiaCtl.MonitorProtocol(UInteger, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorProtocol*
+  name: MonitorProtocol
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorProtocol_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.MonitorProtocol
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorProtocol
+  nameWithType: PiaCtl.MonitorProtocol
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorPubIp(System.UInt32,System.Boolean)
+  name: MonitorPubIp(uint, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorPubIp_System_UInt32_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.MonitorPubIp(System.UInt32,System.Boolean)
+  name.vb: MonitorPubIp(UInteger, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorPubIp(uint, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.MonitorPubIp(UInteger, Boolean)
+  nameWithType: PiaCtl.MonitorPubIp(uint, bool)
+  nameWithType.vb: PiaCtl.MonitorPubIp(UInteger, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorPubIp*
+  name: MonitorPubIp
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorPubIp_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.MonitorPubIp
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorPubIp
+  nameWithType: PiaCtl.MonitorPubIp
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorRegion(System.UInt32,System.Boolean)
+  name: MonitorRegion(uint, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorRegion_System_UInt32_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.MonitorRegion(System.UInt32,System.Boolean)
+  name.vb: MonitorRegion(UInteger, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorRegion(uint, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.MonitorRegion(UInteger, Boolean)
+  nameWithType: PiaCtl.MonitorRegion(uint, bool)
+  nameWithType.vb: PiaCtl.MonitorRegion(UInteger, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorRegion*
+  name: MonitorRegion
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorRegion_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.MonitorRegion
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorRegion
+  nameWithType: PiaCtl.MonitorRegion
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorRequestPortForward(System.UInt32,System.Boolean)
+  name: MonitorRequestPortForward(uint, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorRequestPortForward_System_UInt32_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.MonitorRequestPortForward(System.UInt32,System.Boolean)
+  name.vb: MonitorRequestPortForward(UInteger, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorRequestPortForward(uint, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.MonitorRequestPortForward(UInteger, Boolean)
+  nameWithType: PiaCtl.MonitorRequestPortForward(uint, bool)
+  nameWithType.vb: PiaCtl.MonitorRequestPortForward(UInteger, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorRequestPortForward*
+  name: MonitorRequestPortForward
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorRequestPortForward_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.MonitorRequestPortForward
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorRequestPortForward
+  nameWithType: PiaCtl.MonitorRequestPortForward
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorVpnIp(System.UInt32,System.Boolean)
+  name: MonitorVpnIp(uint, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorVpnIp_System_UInt32_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.MonitorVpnIp(System.UInt32,System.Boolean)
+  name.vb: MonitorVpnIp(UInteger, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorVpnIp(uint, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.MonitorVpnIp(UInteger, Boolean)
+  nameWithType: PiaCtl.MonitorVpnIp(uint, bool)
+  nameWithType.vb: PiaCtl.MonitorVpnIp(UInteger, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.MonitorVpnIp*
+  name: MonitorVpnIp
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_MonitorVpnIp_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.MonitorVpnIp
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.MonitorVpnIp
+  nameWithType: PiaCtl.MonitorVpnIp
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.RemoveDedicatedIp(System.String,System.Boolean)
+  name: RemoveDedicatedIp(string, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_RemoveDedicatedIp_System_String_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.RemoveDedicatedIp(System.String,System.Boolean)
+  name.vb: RemoveDedicatedIp(String, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.RemoveDedicatedIp(string, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.RemoveDedicatedIp(String, Boolean)
+  nameWithType: PiaCtl.RemoveDedicatedIp(string, bool)
+  nameWithType.vb: PiaCtl.RemoveDedicatedIp(String, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.RemoveDedicatedIp*
+  name: RemoveDedicatedIp
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_RemoveDedicatedIp_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.RemoveDedicatedIp
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.RemoveDedicatedIp
+  nameWithType: PiaCtl.RemoveDedicatedIp
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.ResetSettings(System.Boolean)
+  name: ResetSettings(bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_ResetSettings_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.ResetSettings(System.Boolean)
+  name.vb: ResetSettings(Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.ResetSettings(bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.ResetSettings(Boolean)
+  nameWithType: PiaCtl.ResetSettings(bool)
+  nameWithType.vb: PiaCtl.ResetSettings(Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.ResetSettings*
+  name: ResetSettings
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_ResetSettings_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.ResetSettings
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.ResetSettings
+  nameWithType: PiaCtl.ResetSettings
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.SetAllowLan(System.Boolean,System.Boolean)
+  name: SetAllowLan(bool, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_SetAllowLan_System_Boolean_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.SetAllowLan(System.Boolean,System.Boolean)
+  name.vb: SetAllowLan(Boolean, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.SetAllowLan(bool, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.SetAllowLan(Boolean, Boolean)
+  nameWithType: PiaCtl.SetAllowLan(bool, bool)
+  nameWithType.vb: PiaCtl.SetAllowLan(Boolean, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.SetAllowLan*
+  name: SetAllowLan
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_SetAllowLan_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.SetAllowLan
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.SetAllowLan
+  nameWithType: PiaCtl.SetAllowLan
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.SetDebugLogging(System.Boolean,System.Boolean)
+  name: SetDebugLogging(bool, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_SetDebugLogging_System_Boolean_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.SetDebugLogging(System.Boolean,System.Boolean)
+  name.vb: SetDebugLogging(Boolean, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.SetDebugLogging(bool, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.SetDebugLogging(Boolean, Boolean)
+  nameWithType: PiaCtl.SetDebugLogging(bool, bool)
+  nameWithType.vb: PiaCtl.SetDebugLogging(Boolean, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.SetDebugLogging*
+  name: SetDebugLogging
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_SetDebugLogging_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.SetDebugLogging
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.SetDebugLogging
+  nameWithType: PiaCtl.SetDebugLogging
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.SetProtocol(System.String,System.Boolean)
+  name: SetProtocol(string, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_SetProtocol_System_String_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.SetProtocol(System.String,System.Boolean)
+  name.vb: SetProtocol(String, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.SetProtocol(string, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.SetProtocol(String, Boolean)
+  nameWithType: PiaCtl.SetProtocol(string, bool)
+  nameWithType.vb: PiaCtl.SetProtocol(String, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.SetProtocol*
+  name: SetProtocol
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_SetProtocol_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.SetProtocol
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.SetProtocol
+  nameWithType: PiaCtl.SetProtocol
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.SetRegion(System.String,System.Boolean)
+  name: SetRegion(string, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_SetRegion_System_String_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.SetRegion(System.String,System.Boolean)
+  name.vb: SetRegion(String, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.SetRegion(string, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.SetRegion(String, Boolean)
+  nameWithType: PiaCtl.SetRegion(string, bool)
+  nameWithType.vb: PiaCtl.SetRegion(String, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.SetRegion*
+  name: SetRegion
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_SetRegion_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.SetRegion
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.SetRegion
+  nameWithType: PiaCtl.SetRegion
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.SetRequestPortForward(System.Boolean,System.Boolean)
+  name: SetRequestPortForward(bool, bool)
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_SetRequestPortForward_System_Boolean_System_Boolean_
+  commentId: M:Cmpnnt.Pia.Ctl.PiaCtl.SetRequestPortForward(System.Boolean,System.Boolean)
+  name.vb: SetRequestPortForward(Boolean, Boolean)
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.SetRequestPortForward(bool, bool)
+  fullName.vb: Cmpnnt.Pia.Ctl.PiaCtl.SetRequestPortForward(Boolean, Boolean)
+  nameWithType: PiaCtl.SetRequestPortForward(bool, bool)
+  nameWithType.vb: PiaCtl.SetRequestPortForward(Boolean, Boolean)
+- uid: Cmpnnt.Pia.Ctl.PiaCtl.SetRequestPortForward*
+  name: SetRequestPortForward
+  href: api/Cmpnnt.Pia.Ctl.PiaCtl.html#Cmpnnt_Pia_Ctl_PiaCtl_SetRequestPortForward_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtl.SetRequestPortForward
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtl.SetRequestPortForward
+  nameWithType: PiaCtl.SetRequestPortForward
+- uid: Cmpnnt.Pia.Ctl.PiaCtlOptions
+  name: PiaCtlOptions
+  href: api/Cmpnnt.Pia.Ctl.PiaCtlOptions.html
+  commentId: T:Cmpnnt.Pia.Ctl.PiaCtlOptions
+  fullName: Cmpnnt.Pia.Ctl.PiaCtlOptions
+  nameWithType: PiaCtlOptions
+- uid: Cmpnnt.Pia.Ctl.PiaCtlOptions.PiaPath
+  name: PiaPath
+  href: api/Cmpnnt.Pia.Ctl.PiaCtlOptions.html#Cmpnnt_Pia_Ctl_PiaCtlOptions_PiaPath
+  commentId: P:Cmpnnt.Pia.Ctl.PiaCtlOptions.PiaPath
+  fullName: Cmpnnt.Pia.Ctl.PiaCtlOptions.PiaPath
+  nameWithType: PiaCtlOptions.PiaPath
+- uid: Cmpnnt.Pia.Ctl.PiaCtlOptions.PiaPath*
+  name: PiaPath
+  href: api/Cmpnnt.Pia.Ctl.PiaCtlOptions.html#Cmpnnt_Pia_Ctl_PiaCtlOptions_PiaPath_
+  commentId: Overload:Cmpnnt.Pia.Ctl.PiaCtlOptions.PiaPath
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.PiaCtlOptions.PiaPath
+  nameWithType: PiaCtlOptions.PiaPath
+- uid: Cmpnnt.Pia.DependencyInjection.Extensions
+  name: Cmpnnt.Pia.DependencyInjection.Extensions
+  href: api/Cmpnnt.Pia.DependencyInjection.Extensions.html
+  commentId: N:Cmpnnt.Pia.DependencyInjection.Extensions
+  fullName: Cmpnnt.Pia.DependencyInjection.Extensions
+  nameWithType: Cmpnnt.Pia.DependencyInjection.Extensions
+- uid: Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.html
+  commentId: T:Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions
+  fullName: Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.AddPiaCtl(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Cmpnnt.Pia.Ctl.PiaCtlOptions})
+  name: AddPiaCtl(IServiceCollection, Action<PiaCtlOptions>?)
+  href: api/Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.html#Cmpnnt_Pia_DependencyInjection_Extensions_ServiceCollectionExtensions_AddPiaCtl_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Cmpnnt_Pia_Ctl_PiaCtlOptions__
+  commentId: M:Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.AddPiaCtl(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Cmpnnt.Pia.Ctl.PiaCtlOptions})
+  name.vb: AddPiaCtl(IServiceCollection, Action(Of PiaCtlOptions))
+  fullName: Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.AddPiaCtl(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Cmpnnt.Pia.Ctl.PiaCtlOptions>?)
+  fullName.vb: Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.AddPiaCtl(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of Cmpnnt.Pia.Ctl.PiaCtlOptions))
+  nameWithType: ServiceCollectionExtensions.AddPiaCtl(IServiceCollection, Action<PiaCtlOptions>?)
+  nameWithType.vb: ServiceCollectionExtensions.AddPiaCtl(IServiceCollection, Action(Of PiaCtlOptions))
+- uid: Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.AddPiaCtl*
+  name: AddPiaCtl
+  href: api/Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.html#Cmpnnt_Pia_DependencyInjection_Extensions_ServiceCollectionExtensions_AddPiaCtl_
+  commentId: Overload:Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.AddPiaCtl
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.AddPiaCtl
+  nameWithType: ServiceCollectionExtensions.AddPiaCtl
+- uid: Cmpnnt.Pia.Examples
+  name: Cmpnnt.Pia.Examples
+  href: api/Cmpnnt.Pia.Examples.html
+  commentId: N:Cmpnnt.Pia.Examples
+  fullName: Cmpnnt.Pia.Examples
+  nameWithType: Cmpnnt.Pia.Examples
+- uid: Cmpnnt.Pia.Examples.Program
+  name: Program
+  href: api/Cmpnnt.Pia.Examples.Program.html
+  commentId: T:Cmpnnt.Pia.Examples.Program
+  fullName: Cmpnnt.Pia.Examples.Program
+  nameWithType: Program
+- uid: Cmpnnt.Pia.Examples.SomeClass
+  name: SomeClass
+  href: api/Cmpnnt.Pia.Examples.SomeClass.html
+  commentId: T:Cmpnnt.Pia.Examples.SomeClass
+  fullName: Cmpnnt.Pia.Examples.SomeClass
+  nameWithType: SomeClass
+- uid: Cmpnnt.Pia.Examples.SomeClass.#ctor(Cmpnnt.Pia.Ctl.PiaCtl,Microsoft.Extensions.Logging.ILogger{Cmpnnt.Pia.Examples.SomeClass})
+  name: SomeClass(PiaCtl, ILogger<SomeClass>)
+  href: api/Cmpnnt.Pia.Examples.SomeClass.html#Cmpnnt_Pia_Examples_SomeClass__ctor_Cmpnnt_Pia_Ctl_PiaCtl_Microsoft_Extensions_Logging_ILogger_Cmpnnt_Pia_Examples_SomeClass__
+  commentId: M:Cmpnnt.Pia.Examples.SomeClass.#ctor(Cmpnnt.Pia.Ctl.PiaCtl,Microsoft.Extensions.Logging.ILogger{Cmpnnt.Pia.Examples.SomeClass})
+  name.vb: New(PiaCtl, ILogger(Of SomeClass))
+  fullName: Cmpnnt.Pia.Examples.SomeClass.SomeClass(Cmpnnt.Pia.Ctl.PiaCtl, Microsoft.Extensions.Logging.ILogger<Cmpnnt.Pia.Examples.SomeClass>)
+  fullName.vb: Cmpnnt.Pia.Examples.SomeClass.New(Cmpnnt.Pia.Ctl.PiaCtl, Microsoft.Extensions.Logging.ILogger(Of Cmpnnt.Pia.Examples.SomeClass))
+  nameWithType: SomeClass.SomeClass(PiaCtl, ILogger<SomeClass>)
+  nameWithType.vb: SomeClass.New(PiaCtl, ILogger(Of SomeClass))
+- uid: Cmpnnt.Pia.Examples.SomeClass.#ctor*
+  name: SomeClass
+  href: api/Cmpnnt.Pia.Examples.SomeClass.html#Cmpnnt_Pia_Examples_SomeClass__ctor_
+  commentId: Overload:Cmpnnt.Pia.Examples.SomeClass.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Cmpnnt.Pia.Examples.SomeClass.SomeClass
+  fullName.vb: Cmpnnt.Pia.Examples.SomeClass.New
+  nameWithType: SomeClass.SomeClass
+  nameWithType.vb: SomeClass.New
+- uid: Cmpnnt.Pia.Examples.SomeClass.Run
+  name: Run()
+  href: api/Cmpnnt.Pia.Examples.SomeClass.html#Cmpnnt_Pia_Examples_SomeClass_Run
+  commentId: M:Cmpnnt.Pia.Examples.SomeClass.Run
+  fullName: Cmpnnt.Pia.Examples.SomeClass.Run()
+  nameWithType: SomeClass.Run()
+- uid: Cmpnnt.Pia.Examples.SomeClass.Run*
+  name: Run
+  href: api/Cmpnnt.Pia.Examples.SomeClass.html#Cmpnnt_Pia_Examples_SomeClass_Run_
+  commentId: Overload:Cmpnnt.Pia.Examples.SomeClass.Run
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Examples.SomeClass.Run
+  nameWithType: SomeClass.Run
