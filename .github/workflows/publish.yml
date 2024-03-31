@@ -42,21 +42,11 @@ jobs:
       - name: Get Published Get Cmpnnt.Pia.Ctl Version
         id: get-ctl-package-version
         run: | 
-          echo version=$(curl -L \
-          -H "Accept: application/vnd.github+json" \
-          -H "Authorization: Bearer ${{ secrets.PACKAGES_PAT }}" \
-          -H "X-GitHub-Api-Version: 2022-11-28" \
-          https://api.github.com/user/packages/nuget/cmpnnt.pia.ctl.linux/versions \
-          | jq -r '.[0].name') >> $GITHUB_OUTPUT
+          echo version=$(curl https://api.nuget.org/v3-flatcontainer/cmpnnt.pia.ctl/index.json | jq -r .versions[-1]) >> $GITHUB_OUTPUT
       - name: Get Published Get Cmpnnt.Pia.DependencyInjection Version
         id: get-di-package-version
         run: |
-          echo version=$(curl -L \
-          -H "Accept: application/vnd.github+json" \
-          -H "Authorization: Bearer ${{ secrets.PACKAGES_PAT }}" \
-          -H "X-GitHub-Api-Version: 2022-11-28" \
-          https://api.github.com/user/packages/nuget/cmpnnt.pia.dependencyinjection.linux/versions \
-          | jq -r '.[0].name') >> $GITHUB_OUTPUT
+          echo version=$(curl https://api.nuget.org/v3-flatcontainer/cmpnnt.pia.dependencyinjection/index.json | jq -r .versions[-1]) >> $GITHUB_OUTPUT
   create_ctl_packages:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -103,35 +93,24 @@ jobs:
         with:
           name: Cmpnnt.Pia.Ctl.dll-osx-arm64
           path: Cmpnnt.Pia.Ctl.Meta/runtimes/osx-arm64/native
-      - name: Add Github Nuget Source
-        id: add-github-nuget-source
-        run: dotnet nuget add source --username cmpnnt --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/cmpnnt/index.json"
       - name: Create Meta Package
         id: create-meta-package
         run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_changelog_versions.outputs.ctl-version-number }} Cmpnnt.Pia.Ctl/Cmpnnt.Pia.Ctl.csproj
       - name: Push Meta Package to Nuget
         id: push-meta-package
-        run: dotnet nuget push 'Cmpnnt.Pia.Ctl/bin/Release/Cmpnnt.Pia.Ctl.${{ needs.get_changelog_versions.outputs.ctl-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
+        run: dotnet nuget push 'Cmpnnt.Pia.Ctl/bin/Release/Cmpnnt.Pia.Ctl.${{ needs.get_changelog_versions.outputs.ctl-version-number }}.nupkg' --api-key ${{ secrets.NUGET_DEFAULT_TOKEN }} --source https://api.nuget.org/v3/index.json
   publish_di_package:
     runs-on: ubuntu-latest
     needs: [get_changelog_versions, get_published_packages_versions, publish_meta_package]
     if: needs.get_changelog_versions.outputs.di-version-number != needs.get_published_packages_versions.outputs.di-package-version
     steps:
       - uses: actions/checkout@v4
-      - name: Add Github Nuget Source
-        id: add-github-nuget-source
-        run: dotnet nuget add source --username cmpnnt --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/cmpnnt/index.json"
       - name: Create DI Package
         id: create-di-package
         run: dotnet pack -c Release --nologo -p:PackageVersion=${{ needs.get_changelog_versions.outputs.di-version-number }} Cmpnnt.Pia.DependencyInjection/Cmpnnt.Pia.DependencyInjection.csproj
       - name: Push DI Package to Nuget
         id: push-di-package
-        run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ needs.get_changelog_versions.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
-  
-# TODO: Get MacOS default piactl executable path  
-# TODO: remove github nuget sources and replace with nuget.org
-# TODO: Changelog should trigger both documentation and publish workflows
-# TODO: make public and publish documentation to github page
+        run: dotnet nuget push 'Cmpnnt.Pia.DependencyInjection/bin/Release/Cmpnnt.Pia.DependencyInjection.${{ needs.get_changelog_versions.outputs.di-version-number }}.nupkg' --api-key ${{ secrets.NUGET_DEFAULT_TOKEN }} --source https://api.nuget.org/v3/index.json
 
 # TODO: figure a better way to distribute the debug symbols. Might have to create a new .nupkg file just for the debug symbols
 # TODO: determine a way to automatically update the relevant sub-changelogs when conventional commits are added to any given package.

@@ -2,11 +2,16 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <PublishAot>true</PublishAot>
-        <StripSymbols>true</StripSymbols>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Cmpnnt.Pia.DependencyInjection</RootNamespace>
+        <PublishAot>true</PublishAot>
+        <TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+        <PublishTrimmed>true</PublishTrimmed>
+        <TrimMode>full</TrimMode>
+        <EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
+        <EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>
+        <HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>
     </PropertyGroup>
 
     <ItemGroup>

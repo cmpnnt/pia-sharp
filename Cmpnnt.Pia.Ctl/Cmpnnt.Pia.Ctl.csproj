@@ -2,11 +2,16 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <PublishAot>true</PublishAot>
-        <TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Cmpnnt.Pia.Ctl</RootNamespace>
+        <PublishAot>true</PublishAot>
+        <TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+        <PublishTrimmed>true</PublishTrimmed>
+        <TrimMode>full</TrimMode>
+        <EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
+        <EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>
+        <HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>
     </PropertyGroup>
     
     <!-- Begin: Nuget/Package settings -->
@@ -31,11 +36,11 @@
     
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="/"/>
-        <None Include="LICENSE.txt" Pack="true" PackagePath="/"/>
-        <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/linux-x64/native/" Pack="true" PackagePath="/runtimes/linux-x64/native" />
-        <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/win-x64/native/" Pack="true" PackagePath="/runtimes/win-x64/native" />
-        <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/osx-x64/native/" Pack="true" PackagePath="/runtimes/osx-x64/native" />
-        <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/osx-arm64/native/" Pack="true" PackagePath="/runtimes/osx-arm64/native" />
+        <None Include="../LICENSE.txt" Pack="true" PackagePath="/"/>
+        <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/linux-x64/native/Cmpnnt.Pia.Ctl.so" Pack="true" PackagePath="/runtimes/linux-x64/native" />
+        <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/win-x64/native/Cmpnnt.Pia.Ctl.dll" Pack="true" PackagePath="/runtimes/win-x64/native" />
+        <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/osx-x64/native/Cmpnnt.Pia.Ctl.dylib" Pack="true" PackagePath="/runtimes/osx-x64/native" />
+        <None Include="../Cmpnnt.Pia.Ctl.Meta/runtimes/osx-arm64/native/Cmpnnt.Pia.Ctl.dylib" Pack="true" PackagePath="/runtimes/osx-arm64/native" />
     </ItemGroup>
     <!-- End: Nuget/Package settings -->
     
