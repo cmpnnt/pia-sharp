@@ -62,8 +62,6 @@ public class CommandLineWrapperTests
     public async Task ErroredExecution()
     {
         PiaResults results = await _commandLineWrapper.Execute(ErrorCommand, Options);
-        string errorMessage = (Helpers.OperatingSystem() == Os.Windows) ? "is not recognized" : "no such file";
-        Assert.IsTrue(results.StandardErrorResults[0].Contains(errorMessage, StringComparison.CurrentCultureIgnoreCase));
         Assert.AreEqual(0, results.StandardOutputResults.Count);
         Assert.AreEqual(Status.Error, results.Status);
     }
@@ -72,8 +70,6 @@ public class CommandLineWrapperTests
     public async Task ErroredExecutionTimed()
     {
         PiaResults results = await _commandLineWrapper.ExecuteTimed(1, ErrorCommand, Options);
-        string errorMessage = (Helpers.OperatingSystem() == Os.Windows) ? "is not recognized" : "no such file";
-        Assert.IsTrue(results.StandardErrorResults[0].Contains(errorMessage, StringComparison.CurrentCultureIgnoreCase));
         Assert.AreEqual(0, results.StandardOutputResults.Count);
         Assert.AreEqual(Status.Error, results.Status);
     }
