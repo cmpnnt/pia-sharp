@@ -20,7 +20,7 @@ jobs:
           branch: main
           majorList: breaking, major
           minorList: feat, feature
-          patchList: fix, bugfix, perf, refactor
+          patchList: fix, bugfix, perf, refactor, test, tests
 
       - name: Create Draft Release
         uses: ncipollo/release-action@v1.12.0

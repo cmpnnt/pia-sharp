@@ -31,16 +31,12 @@ public class ServiceCollectionExtensionsTests
     {
         var services = new ServiceCollection();
 
-        if (Helpers.OperatingSystem() == Os.Windows || Helpers.OperatingSystem() == Os.Linux)
+        if (Helpers.OperatingSystem() == Os.Windows || Helpers.OperatingSystem() == Os.Linux || Helpers.OperatingSystem() == Os.MacOs)
         {
             services.AddPiaCtl(options =>
             {
                 options.PiaPath = PiaEnvironment.PiaPath;
             });
-        }
-        else if(Helpers.OperatingSystem() == Os.MacOs)
-        {
-            throw new ArgumentException("MacOS is currently unsupported because of limitations in .NET 7.");
         }
         else
         {
