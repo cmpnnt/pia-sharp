@@ -9,6 +9,11 @@
     "title": "Enum DaemonAction | PIA Sharp",
     "keywords": "Enum DaemonAction Namespace Cmpnnt.Pia.Ctl.Enums Assembly Cmpnnt.Pia.Ctl.dll Represents \"sub-commands\" available as getters, setters and monitoring commands. Note that not all DaemonActions are available for every Command. public enum DaemonAction Extension Methods DaemonActionExtensions.ToStringF(DaemonAction) Fields AllowLan = 1 ConnectionState = 2 DebugLogging = 3 None = 0 PortForward = 4 Protocol = 5 PubIp = 6 Region = 7 Regions = 8 RequestPortForward = 9 VpnIp = 10"
   },
+  "api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html": {
+    "href": "api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html",
+    "title": "Enum MultiRegion | PIA Sharp",
+    "keywords": "Enum MultiRegion Namespace Cmpnnt.Pia.Ctl.Enums Assembly Cmpnnt.Pia.Ctl.dll public enum MultiRegion Extension Methods MultiRegionExtensions.ToStringF(MultiRegion) Fields AU = 0 CA = 1 DE = 2 DK = 3 ES = 4 FI = 5 IT = 6 JP = 7 NL = 8 SE = 9 UK = 10 US = 11"
+  },
   "api/Cmpnnt.Pia.Ctl.Enums.Status.html": {
     "href": "api/Cmpnnt.Pia.Ctl.Enums.Status.html",
     "title": "Enum Status | PIA Sharp",
@@ -17,7 +22,7 @@
   "api/Cmpnnt.Pia.Ctl.Enums.html": {
     "href": "api/Cmpnnt.Pia.Ctl.Enums.html",
     "title": "Namespace Cmpnnt.Pia.Ctl.Enums | PIA Sharp",
-    "keywords": "Namespace Cmpnnt.Pia.Ctl.Enums Enums Command Represents \"top-level\" piactl commands such as getters, setters, monitoring and connection commands. DaemonAction Represents \"sub-commands\" available as getters, setters and monitoring commands. Note that not all DaemonActions are available for every Command. Status Represents the final status of a piactl command."
+    "keywords": "Namespace Cmpnnt.Pia.Ctl.Enums Enums Command Represents \"top-level\" piactl commands such as getters, setters, monitoring and connection commands. DaemonAction Represents \"sub-commands\" available as getters, setters and monitoring commands. Note that not all DaemonActions are available for every Command. MultiRegion Status Represents the final status of a piactl command."
   },
   "api/Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.html": {
     "href": "api/Cmpnnt.Pia.Ctl.Extensions.CommandExtensions.html",
@@ -29,6 +34,11 @@
     "title": "Class DaemonActionExtensions | PIA Sharp",
     "keywords": "Class DaemonActionExtensions Namespace Cmpnnt.Pia.Ctl.Extensions Assembly Cmpnnt.Pia.Ctl.dll public static class DaemonActionExtensions Inheritance object DaemonActionExtensions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods ToStringF(DaemonAction) A more efficient version of ToString() for enums. public static string ToStringF(this DaemonAction action) Parameters action DaemonAction A DaemonAction value Returns string A lowercase version of the name of the enum. Exceptions ArgumentException"
   },
+  "api/Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.html": {
+    "href": "api/Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.html",
+    "title": "Class MultiRegionExtensions | PIA Sharp",
+    "keywords": "Class MultiRegionExtensions Namespace Cmpnnt.Pia.Ctl.Extensions Assembly Cmpnnt.Pia.Ctl.dll public static class MultiRegionExtensions Inheritance object MultiRegionExtensions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods ToStringF(MultiRegion) A more efficient version of ToString() for enums. public static string ToStringF(this MultiRegion multiRegion) Parameters multiRegion MultiRegion A MultiRegion value Returns string A lowercase version of the name of the enum. Exceptions ArgumentException"
+  },
   "api/Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.html": {
     "href": "api/Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.html",
     "title": "Class StatusExtensions | PIA Sharp",
@@ -37,7 +47,7 @@
   "api/Cmpnnt.Pia.Ctl.Extensions.html": {
     "href": "api/Cmpnnt.Pia.Ctl.Extensions.html",
     "title": "Namespace Cmpnnt.Pia.Ctl.Extensions | PIA Sharp",
-    "keywords": "Namespace Cmpnnt.Pia.Ctl.Extensions Classes CommandExtensions DaemonActionExtensions StatusExtensions"
+    "keywords": "Namespace Cmpnnt.Pia.Ctl.Extensions Classes CommandExtensions DaemonActionExtensions MultiRegionExtensions StatusExtensions"
   },
   "api/Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.html": {
     "href": "api/Cmpnnt.Pia.Ctl.Lib.CommandLineWrapper.html",
@@ -104,10 +114,15 @@
     "title": "Class PiaCtlOptions | PIA Sharp",
     "keywords": "Class PiaCtlOptions Namespace Cmpnnt.Pia.Ctl Assembly Cmpnnt.Pia.Ctl.dll Allows configuration of PiaCtl public class PiaCtlOptions Inheritance object PiaCtlOptions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties PiaPath public string PiaPath { get; set; } Property Value string"
   },
+  "api/Cmpnnt.Pia.Ctl.Utilities.html": {
+    "href": "api/Cmpnnt.Pia.Ctl.Utilities.html",
+    "title": "Class Utilities | PIA Sharp",
+    "keywords": "Class Utilities Namespace Cmpnnt.Pia.Ctl Assembly Cmpnnt.Pia.Ctl.dll public class Utilities Inheritance object Utilities Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors Utilities() public Utilities() Utilities(PiaCtl) public Utilities(PiaCtl piaCtl) Parameters piaCtl PiaCtl Methods SwitchToFastest(MultiRegion) public Task<PiaResults> SwitchToFastest(MultiRegion regionPrefix) Parameters regionPrefix MultiRegion Returns Task<PiaResults>"
+  },
   "api/Cmpnnt.Pia.Ctl.html": {
     "href": "api/Cmpnnt.Pia.Ctl.html",
     "title": "Namespace Cmpnnt.Pia.Ctl | PIA Sharp",
-    "keywords": "Namespace Cmpnnt.Pia.Ctl Classes PiaCtl A convenience class to call the commands available in the piactl command line application. The methods are all asynchronous despite not using the async suffix. PiaCtlOptions Allows configuration of PiaCtl"
+    "keywords": "Namespace Cmpnnt.Pia.Ctl Classes PiaCtl A convenience class to call the commands available in the piactl command line application. The methods are all asynchronous despite not using the async suffix. PiaCtlOptions Allows configuration of PiaCtl Utilities"
   },
   "api/Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.html": {
     "href": "api/Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.html",

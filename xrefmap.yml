@@ -157,6 +157,84 @@ references:
   commentId: F:Cmpnnt.Pia.Ctl.Enums.DaemonAction.VpnIp
   fullName: Cmpnnt.Pia.Ctl.Enums.DaemonAction.VpnIp
   nameWithType: DaemonAction.VpnIp
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion
+  name: MultiRegion
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html
+  commentId: T:Cmpnnt.Pia.Ctl.Enums.MultiRegion
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion
+  nameWithType: MultiRegion
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.AU
+  name: AU
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_AU
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.AU
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.AU
+  nameWithType: MultiRegion.AU
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.CA
+  name: CA
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_CA
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.CA
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.CA
+  nameWithType: MultiRegion.CA
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.DE
+  name: DE
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_DE
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.DE
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.DE
+  nameWithType: MultiRegion.DE
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.DK
+  name: DK
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_DK
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.DK
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.DK
+  nameWithType: MultiRegion.DK
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.ES
+  name: ES
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_ES
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.ES
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.ES
+  nameWithType: MultiRegion.ES
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.FI
+  name: FI
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_FI
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.FI
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.FI
+  nameWithType: MultiRegion.FI
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.IT
+  name: IT
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_IT
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.IT
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.IT
+  nameWithType: MultiRegion.IT
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.JP
+  name: JP
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_JP
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.JP
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.JP
+  nameWithType: MultiRegion.JP
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.NL
+  name: NL
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_NL
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.NL
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.NL
+  nameWithType: MultiRegion.NL
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.SE
+  name: SE
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_SE
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.SE
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.SE
+  nameWithType: MultiRegion.SE
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.UK
+  name: UK
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_UK
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.UK
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.UK
+  nameWithType: MultiRegion.UK
+- uid: Cmpnnt.Pia.Ctl.Enums.MultiRegion.US
+  name: US
+  href: api/Cmpnnt.Pia.Ctl.Enums.MultiRegion.html#Cmpnnt_Pia_Ctl_Enums_MultiRegion_US
+  commentId: F:Cmpnnt.Pia.Ctl.Enums.MultiRegion.US
+  fullName: Cmpnnt.Pia.Ctl.Enums.MultiRegion.US
+  nameWithType: MultiRegion.US
 - uid: Cmpnnt.Pia.Ctl.Enums.Status
   name: Status
   href: api/Cmpnnt.Pia.Ctl.Enums.Status.html
@@ -237,6 +315,25 @@ references:
   isSpec: "True"
   fullName: Cmpnnt.Pia.Ctl.Extensions.DaemonActionExtensions.ToStringF
   nameWithType: DaemonActionExtensions.ToStringF
+- uid: Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions
+  name: MultiRegionExtensions
+  href: api/Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.html
+  commentId: T:Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions
+  fullName: Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions
+  nameWithType: MultiRegionExtensions
+- uid: Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.MultiRegion)
+  name: ToStringF(MultiRegion)
+  href: api/Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.html#Cmpnnt_Pia_Ctl_Extensions_MultiRegionExtensions_ToStringF_Cmpnnt_Pia_Ctl_Enums_MultiRegion_
+  commentId: M:Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.MultiRegion)
+  fullName: Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.ToStringF(Cmpnnt.Pia.Ctl.Enums.MultiRegion)
+  nameWithType: MultiRegionExtensions.ToStringF(MultiRegion)
+- uid: Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.ToStringF*
+  name: ToStringF
+  href: api/Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.html#Cmpnnt_Pia_Ctl_Extensions_MultiRegionExtensions_ToStringF_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.ToStringF
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Extensions.MultiRegionExtensions.ToStringF
+  nameWithType: MultiRegionExtensions.ToStringF
 - uid: Cmpnnt.Pia.Ctl.Extensions.StatusExtensions
   name: StatusExtensions
   href: api/Cmpnnt.Pia.Ctl.Extensions.StatusExtensions.html
@@ -1193,6 +1290,53 @@ references:
   isSpec: "True"
   fullName: Cmpnnt.Pia.Ctl.PiaCtlOptions.PiaPath
   nameWithType: PiaCtlOptions.PiaPath
+- uid: Cmpnnt.Pia.Ctl.Utilities
+  name: Utilities
+  href: api/Cmpnnt.Pia.Ctl.Utilities.html
+  commentId: T:Cmpnnt.Pia.Ctl.Utilities
+  fullName: Cmpnnt.Pia.Ctl.Utilities
+  nameWithType: Utilities
+- uid: Cmpnnt.Pia.Ctl.Utilities.#ctor
+  name: Utilities()
+  href: api/Cmpnnt.Pia.Ctl.Utilities.html#Cmpnnt_Pia_Ctl_Utilities__ctor
+  commentId: M:Cmpnnt.Pia.Ctl.Utilities.#ctor
+  name.vb: New()
+  fullName: Cmpnnt.Pia.Ctl.Utilities.Utilities()
+  fullName.vb: Cmpnnt.Pia.Ctl.Utilities.New()
+  nameWithType: Utilities.Utilities()
+  nameWithType.vb: Utilities.New()
+- uid: Cmpnnt.Pia.Ctl.Utilities.#ctor(Cmpnnt.Pia.Ctl.PiaCtl)
+  name: Utilities(PiaCtl)
+  href: api/Cmpnnt.Pia.Ctl.Utilities.html#Cmpnnt_Pia_Ctl_Utilities__ctor_Cmpnnt_Pia_Ctl_PiaCtl_
+  commentId: M:Cmpnnt.Pia.Ctl.Utilities.#ctor(Cmpnnt.Pia.Ctl.PiaCtl)
+  name.vb: New(PiaCtl)
+  fullName: Cmpnnt.Pia.Ctl.Utilities.Utilities(Cmpnnt.Pia.Ctl.PiaCtl)
+  fullName.vb: Cmpnnt.Pia.Ctl.Utilities.New(Cmpnnt.Pia.Ctl.PiaCtl)
+  nameWithType: Utilities.Utilities(PiaCtl)
+  nameWithType.vb: Utilities.New(PiaCtl)
+- uid: Cmpnnt.Pia.Ctl.Utilities.#ctor*
+  name: Utilities
+  href: api/Cmpnnt.Pia.Ctl.Utilities.html#Cmpnnt_Pia_Ctl_Utilities__ctor_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Utilities.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Cmpnnt.Pia.Ctl.Utilities.Utilities
+  fullName.vb: Cmpnnt.Pia.Ctl.Utilities.New
+  nameWithType: Utilities.Utilities
+  nameWithType.vb: Utilities.New
+- uid: Cmpnnt.Pia.Ctl.Utilities.SwitchToFastest(Cmpnnt.Pia.Ctl.Enums.MultiRegion)
+  name: SwitchToFastest(MultiRegion)
+  href: api/Cmpnnt.Pia.Ctl.Utilities.html#Cmpnnt_Pia_Ctl_Utilities_SwitchToFastest_Cmpnnt_Pia_Ctl_Enums_MultiRegion_
+  commentId: M:Cmpnnt.Pia.Ctl.Utilities.SwitchToFastest(Cmpnnt.Pia.Ctl.Enums.MultiRegion)
+  fullName: Cmpnnt.Pia.Ctl.Utilities.SwitchToFastest(Cmpnnt.Pia.Ctl.Enums.MultiRegion)
+  nameWithType: Utilities.SwitchToFastest(MultiRegion)
+- uid: Cmpnnt.Pia.Ctl.Utilities.SwitchToFastest*
+  name: SwitchToFastest
+  href: api/Cmpnnt.Pia.Ctl.Utilities.html#Cmpnnt_Pia_Ctl_Utilities_SwitchToFastest_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Utilities.SwitchToFastest
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Utilities.SwitchToFastest
+  nameWithType: Utilities.SwitchToFastest
 - uid: Cmpnnt.Pia.DependencyInjection.Extensions
   name: Cmpnnt.Pia.DependencyInjection.Extensions
   href: api/Cmpnnt.Pia.DependencyInjection.Extensions.html

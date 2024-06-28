@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -104,6 +104,10 @@ The methods are all asynchronous despite not using the <code>async</code> suffix
       <dt><a class="xref" href="Cmpnnt.Pia.Ctl.PiaCtlOptions.html">PiaCtlOptions</a></dt>
       <dd><p>Allows configuration of <a class="xref" href="Cmpnnt.Pia.Ctl.PiaCtl.html">PiaCtl</a></p>
 </dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Cmpnnt.Pia.Ctl.Utilities.html">Utilities</a></dt>
+      <dd></dd>
     </dl>
 
 
