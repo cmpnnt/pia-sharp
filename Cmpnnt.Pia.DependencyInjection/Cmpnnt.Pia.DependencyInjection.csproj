@@ -46,8 +46,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <None Include="..\LICENSE.txt">
+          <Pack>true</Pack>
+          <PackagePath>/</PackagePath>
+          <Link>LICENSE.txt</Link>
+        </None>
         <None Include="README.md" Pack="true" PackagePath="\"/>
-        <None Include="LICENSE.txt" Pack="true" PackagePath="/"/>
     </ItemGroup>
     <!-- End: Nuget/Package settings -->
     
