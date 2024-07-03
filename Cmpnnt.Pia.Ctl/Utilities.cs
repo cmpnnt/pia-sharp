@@ -19,10 +19,10 @@ public class Utilities
     }
 
     /// <summary>
-    /// 
+    /// Switches to the fastest server in a given region. The region must have multiple servers.
     /// </summary>
-    /// <param name="regionPrefix"></param>
-    /// <returns></returns>
+    /// <param name="regionPrefix">The two-letter prefix of the region in which the servers reside.</param>
+    /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
     public async Task<PiaResults> SwitchToFastest(MultiRegion regionPrefix)
     {
         PiaResults regions = await _piaCtl.GetRegions();
@@ -54,5 +54,23 @@ public class Utilities
         var errorMessage = "Unable to switch to a new region.";
         return new PiaResults{Status = Status.Error, StandardErrorResults = [errorMessage] };
 
+    }
+
+    /// <summary>
+    /// Disconnects the VPN connection for the specified duration. If the advanced killswitch feature
+    /// is enabled, snoozing the VPN will prevent internet access.
+    /// </summary>
+    /// <param name="duration">The duration, in seconds, to suspend the VPN.</param>
+    /// <returns>A `Task&lt;PiaResults&gt;` containing standard output and standard error results.</returns>
+    public async Task<PiaResults> Snooze(int duration, CancellationToken ct = default)
+    {
+        PiaResults connectionResult = await _piaCtl.GetConnectionState();
+        if (connectionResult.StandardOutputResults[0].ToLower() != "connected") return connectionResult;
+        
+        PiaResults result = await _piaCtl.Disconnect();
+        if (result.Status != Status.Completed) return result;
+        
+        await Task.Delay(duration * 1000, ct);
+        return await _piaCtl.Connect();
     }
 }
