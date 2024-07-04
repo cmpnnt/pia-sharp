@@ -2,15 +2,22 @@
 on:
   pull_request:
     types: [labeled, closed]
+  issue_comment:
+    types: [created]
 jobs:
   run_all:
     name: "Run All Tests"
-    if: ${{ github.event.label.name == 'test' ||  github.event.pull_request.merged == true }}
+    if: ${{ github.event.label.name == 'test' ||  github.event.pull_request.merged == true ||
+      (github.event.issue.pull_request && contains(github.event.comment.body, '/tests'))}}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-13, macos-14]
     steps:
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: "Running all tests for all platforms."
       - uses: actions/checkout@v4
       - name: Add Github Nuget Source # TODO: Remove this. It's only needed until I push the package to Nuget
         id: add-github-nuget-source
