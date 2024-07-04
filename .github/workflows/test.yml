@@ -4,6 +4,8 @@ on:
     types: [labeled, closed]
   issue_comment:
     types: [created]
+permissions:
+  pull-requests: write
 jobs:
   comment_pr:
     name: Comment PR
