@@ -4,6 +4,10 @@ using Cmpnnt.Pia.Ctl.Lib.Results;
 
 namespace Cmpnnt.Pia.Ctl;
 
+
+/// <summary>
+/// This class contains utilities not available in the piactl CLI.
+/// </summary>
 public class Utilities
 {
     private readonly PiaCtl _piaCtl;
