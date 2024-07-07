@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 namespace Cmpnnt.Pia.Examples;
 
 /// <summary>
-/// An simple class used as a dummy service for the dependency injection example code.
+/// A simple class used as a dummy service for the dependency injection example code.
 /// </summary>
 public class SomeClass
 {
@@ -23,7 +23,8 @@ public class SomeClass
     /// </summary>
     public async Task Run()
     {
-        PiaResults result = await _pia.GetProtocol();
+        var u = new Utilities(_pia);
+        PiaResults result = await u.Snooze(20);
         _logger.LogInformation("{msg}", result.ToString());
     }
 }

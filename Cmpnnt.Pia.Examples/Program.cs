@@ -16,11 +16,7 @@ public class Program
         using IHost host = Host.CreateDefaultBuilder(args)
             .ConfigureServices(services =>
             {
-                services.AddPiaCtl(options =>
-                {
-                    // Omit this to use the default path to piactl on your system.
-                    options.PiaPath = @"C:\path\to\piactl.exe";
-                });
+                services.AddPiaCtl();
                 
                 // Use services.AddPiaCtl like above (with or without an options parameter) or add it as a singleton like below:
                 //services.AddSingleton<PiaCtl>();
@@ -41,7 +37,7 @@ public class Program
     }
     
     /// <summary>
-    /// A simple function to get the sample <see cref="SomeClass"/> from DI and invoke it.:
+    /// A simple function to get the sample <see cref="SomeClass"/> from DI and invoke it.
     /// </summary>
     /// <param name="hostProvider"></param>
     private static async Task GetServiceAndRunIt(IServiceProvider hostProvider)
