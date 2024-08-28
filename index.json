@@ -117,12 +117,12 @@
   "api/Cmpnnt.Pia.Ctl.Utilities.html": {
     "href": "api/Cmpnnt.Pia.Ctl.Utilities.html",
     "title": "Class Utilities | PIA Sharp",
-    "keywords": "Class Utilities Namespace Cmpnnt.Pia.Ctl Assembly Cmpnnt.Pia.Ctl.dll public class Utilities Inheritance object Utilities Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors Utilities() public Utilities() Utilities(PiaCtl) public Utilities(PiaCtl piaCtl) Parameters piaCtl PiaCtl Methods SwitchToFastest(MultiRegion) public Task<PiaResults> SwitchToFastest(MultiRegion regionPrefix) Parameters regionPrefix MultiRegion Returns Task<PiaResults>"
+    "keywords": "Class Utilities Namespace Cmpnnt.Pia.Ctl Assembly Cmpnnt.Pia.Ctl.dll This class contains utilities not available in the piactl CLI. public class Utilities Inheritance object Utilities Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors Utilities() public Utilities() Utilities(PiaCtl) public Utilities(PiaCtl piaCtl) Parameters piaCtl PiaCtl Methods Snooze(int, CancellationToken) Disconnects the VPN connection for the specified duration. If the advanced killswitch feature is enabled, snoozing the VPN will prevent internet access. public Task<PiaResults> Snooze(int duration, CancellationToken ct = default) Parameters duration int The duration, in seconds, to suspend the VPN. ct CancellationToken Returns Task<PiaResults> A Task<PiaResults> containing standard output and standard error results. SwitchToFastest(MultiRegion) Switches to the fastest server in a given region. The region must have multiple servers. public Task<PiaResults> SwitchToFastest(MultiRegion regionPrefix) Parameters regionPrefix MultiRegion The two-letter prefix of the region in which the servers reside. Returns Task<PiaResults> A Task<PiaResults> containing standard output and standard error results."
   },
   "api/Cmpnnt.Pia.Ctl.html": {
     "href": "api/Cmpnnt.Pia.Ctl.html",
     "title": "Namespace Cmpnnt.Pia.Ctl | PIA Sharp",
-    "keywords": "Namespace Cmpnnt.Pia.Ctl Classes PiaCtl A convenience class to call the commands available in the piactl command line application. The methods are all asynchronous despite not using the async suffix. PiaCtlOptions Allows configuration of PiaCtl Utilities"
+    "keywords": "Namespace Cmpnnt.Pia.Ctl Classes PiaCtl A convenience class to call the commands available in the piactl command line application. The methods are all asynchronous despite not using the async suffix. PiaCtlOptions Allows configuration of PiaCtl Utilities This class contains utilities not available in the piactl CLI."
   },
   "api/Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.html": {
     "href": "api/Cmpnnt.Pia.DependencyInjection.Extensions.ServiceCollectionExtensions.html",
@@ -142,12 +142,12 @@
   "api/Cmpnnt.Pia.Examples.SomeClass.html": {
     "href": "api/Cmpnnt.Pia.Examples.SomeClass.html",
     "title": "Class SomeClass | PIA Sharp",
-    "keywords": "Class SomeClass Namespace Cmpnnt.Pia.Examples Assembly Cmpnnt.Pia.Examples.dll An simple class used as a dummy service for the dependency injection example code. public class SomeClass Inheritance object SomeClass Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors SomeClass(PiaCtl, ILogger<SomeClass>) public SomeClass(PiaCtl pia, ILogger<SomeClass> logger) Parameters pia PiaCtl logger ILogger<SomeClass> Methods Run() Executes a PIA command and logs the results. public Task Run() Returns Task"
+    "keywords": "Class SomeClass Namespace Cmpnnt.Pia.Examples Assembly Cmpnnt.Pia.Examples.dll A simple class used as a dummy service for the dependency injection example code. public class SomeClass Inheritance object SomeClass Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors SomeClass(PiaCtl, ILogger<SomeClass>) public SomeClass(PiaCtl pia, ILogger<SomeClass> logger) Parameters pia PiaCtl logger ILogger<SomeClass> Methods Run() Executes a PIA command and logs the results. public Task Run() Returns Task"
   },
   "api/Cmpnnt.Pia.Examples.html": {
     "href": "api/Cmpnnt.Pia.Examples.html",
     "title": "Namespace Cmpnnt.Pia.Examples | PIA Sharp",
-    "keywords": "Namespace Cmpnnt.Pia.Examples Classes Program An example program illustrating how to use dependency injection with Cmpnnt.Pia.Ctl in a command-line application. SomeClass An simple class used as a dummy service for the dependency injection example code."
+    "keywords": "Namespace Cmpnnt.Pia.Examples Classes Program An example program illustrating how to use dependency injection with Cmpnnt.Pia.Ctl in a command-line application. SomeClass A simple class used as a dummy service for the dependency injection example code."
   },
   "api/index.html": {
     "href": "api/index.html",

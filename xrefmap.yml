@@ -1324,6 +1324,22 @@ references:
   fullName.vb: Cmpnnt.Pia.Ctl.Utilities.New
   nameWithType: Utilities.Utilities
   nameWithType.vb: Utilities.New
+- uid: Cmpnnt.Pia.Ctl.Utilities.Snooze(System.Int32,System.Threading.CancellationToken)
+  name: Snooze(int, CancellationToken)
+  href: api/Cmpnnt.Pia.Ctl.Utilities.html#Cmpnnt_Pia_Ctl_Utilities_Snooze_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Cmpnnt.Pia.Ctl.Utilities.Snooze(System.Int32,System.Threading.CancellationToken)
+  name.vb: Snooze(Integer, CancellationToken)
+  fullName: Cmpnnt.Pia.Ctl.Utilities.Snooze(int, System.Threading.CancellationToken)
+  fullName.vb: Cmpnnt.Pia.Ctl.Utilities.Snooze(Integer, System.Threading.CancellationToken)
+  nameWithType: Utilities.Snooze(int, CancellationToken)
+  nameWithType.vb: Utilities.Snooze(Integer, CancellationToken)
+- uid: Cmpnnt.Pia.Ctl.Utilities.Snooze*
+  name: Snooze
+  href: api/Cmpnnt.Pia.Ctl.Utilities.html#Cmpnnt_Pia_Ctl_Utilities_Snooze_
+  commentId: Overload:Cmpnnt.Pia.Ctl.Utilities.Snooze
+  isSpec: "True"
+  fullName: Cmpnnt.Pia.Ctl.Utilities.Snooze
+  nameWithType: Utilities.Snooze
 - uid: Cmpnnt.Pia.Ctl.Utilities.SwitchToFastest(Cmpnnt.Pia.Ctl.Enums.MultiRegion)
   name: SwitchToFastest(MultiRegion)
   href: api/Cmpnnt.Pia.Ctl.Utilities.html#Cmpnnt_Pia_Ctl_Utilities_SwitchToFastest_Cmpnnt_Pia_Ctl_Enums_MultiRegion_
