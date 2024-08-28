@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.3.0] - 2024-08-28
+### :sparkles: New Features
+- [`c82f193`](https://github.com/cmpnnt/pia-sharp/commit/c82f19327d148410101b4755111499d2f6794512) - add snooze *(commit by [@cmpnnt](https://github.com/cmpnnt))*
+
+
 ## [v0.2.0] - 2024-07-01
 ### :sparkles: New Features
 - [`bee362b`](https://github.com/cmpnnt/pia-sharp/commit/bee362bb6c1d3384c935afe31c613c6438063ff4) - Added a utility to switch to the fastest server in countries with multiple servers. *(commit by [@cmpnnt](https://github.com/cmpnnt))*
@@ -26,3 +31,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [v0.1.0]: https://github.com/cmpnnt/pia-sharp/compare/v0...v0.1.0
 [v0.2.0]: https://github.com/cmpnnt/pia-sharp/compare/v0.1.0...v0.2.0
+[v0.3.0]: https://github.com/cmpnnt/pia-sharp/compare/v0.2.0...v0.3.0
