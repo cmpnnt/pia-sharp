@@ -6,6 +6,7 @@ on:
       - "Update Changelog"
     types:
       - completed
+  workflow_dispatch:
 jobs:
   publish-docs:
     runs-on: ubuntu-latest
